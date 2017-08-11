@@ -4,8 +4,8 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 
-@import "jquery-ui/widgets/datepicker";
-@import "thredded";
+
+
 .thredded--main-container {
   /*The padding and max-width are handled by the app's container*/
   max-width: none;
