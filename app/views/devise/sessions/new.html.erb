@@ -1,0 +1,51 @@
+
+<div class="headernew" style="background-color: #dff0f8">
+<div class="text-center">
+                    <div class="table">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                     <div><h2 class="text-center">Login</h2></div>
+                    <ul>
+                        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>     
+                        <il> <div class="field">
+                             <%= f.label :email %><br>
+                             <%= f.email_field :email, autofocus: true %>
+                             </div>
+                        </il>
+                        <br> 
+                        <il>    
+                            <div class="field">
+                            <%= f.label :password_shh_its_a_secret %><br>
+                            <%= f.password_field :password, autocomplete: "off" %>
+                            </div>                
+                            <% if devise_mapping.rememberable? -%>
+                        </il>
+                        <br>    
+                        <il>    
+                            <div class="field">
+                            <%= f.check_box :remember_me %>
+                            <%= f.label :remember_me %>
+                            </div>
+                            <% end -%>
+                        </il>
+                        <il>     
+                            <div class="actions">
+                            <%= f.submit'Log in' %>
+                            </div> 
+                            <br>
+                          
+                            <% end %>
+                        </il>
+                        <li>  
+                            <%= render "devise/shared/links" %>
+                        </li>
+                    </ul>
+            </div>
+
+                    </div>
+<br>
+<br>
+                    </div>

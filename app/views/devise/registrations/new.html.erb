@@ -1,0 +1,62 @@
+<div class="headernew" style="background-color: #dff0f8">
+<div class="text-center">
+<br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+    <div class="table">
+
+        <div><h2 class="text-center">Sign up</h2></div>
+        <ul>         
+            <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <%= devise_error_messages! %>
+            <br>
+            <il>
+                <div class="field">
+                    <%= f.label :what_your_mum_calls_you %><br />         
+                    <%= f.text_field :user_name, autofocus: true %>
+                </div>
+            </il>
+            <br>
+            <il>
+                <div class="field">
+                    <%= f.label :WhatsApp_Number_for_notifications %><br />         
+                    <%= f.number_field :whatsapp %>
+                </div>
+            </il>
+            <il>
+                <div class="field">
+                <%= f.label :email %><br/>
+                <%= f.email_field :email %>
+                </div>
+            </il>
+            <br>
+            <il>  
+                <div class="field">
+                    <%= f.label :password_shhh_its_a_secret %>
+                    <% if @minimum_password_length %>
+                    <em>(<%= @minimum_password_length %> characters minimum)</em>
+                    <% end %><br />
+                    <%= f.password_field :password, autocomplete: "off" %>
+                </div>
+            </il>
+            <br>   
+            <il>
+                <div class="field">
+                    <%= f.label :Type_your_password_again_quickly_they_are_watching %><br />
+                    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+                </div>
+            </il>
+            <br>
+            <il>
+                <div class="actions"><%= f.submit "Sign up" %></div>
+                <% end %>
+            </il>
+                <il>  <%= render "devise/shared/links" %>  </il>
+        </ul>  
+    </div>
+</div>
+<br>
+<br>
+</div>

@@ -1,0 +1,79 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+	<div class="row">
+		<div class="text-center">
+				<h2><strong><%= @classroom.title %></strong></h2>
+		</div>
+		<br>
+		<div class="col-sm-10">
+			<a href="#" class="list-group-item text-center" style="background-color: #dff0d8;">
+				<h4 class="list-group-item-heading">View All Questions</h4>
+			</a>
+			<br>
+			<p>This is where the threded gem will go for the class forum </p>
+		</div>
+		
+		<div class="panel col-sm-2">
+			<div class="panel-heading">
+				<h3 class="panel-title"><%= current_user.user_name %></h3>
+			</div><!-- end panel-heading -->
+			<img src="/assets/esa1.jpg", class="img-responsive img-thumbnail img-circle">
+            <p class="text-muted"><%= link_to 'Edit Profile', '/users/edit' %></p>						
+            <br>
+        	<div class="list-group">
+			<%= link_to 'Class Mates',classrooms_mates_path, :class => "btn btn-default btn-lg" %>
+			<br>
+			<br>
+			<%= link_to 'Course Outline',classrooms_mates_path, :class => "btn btn-default btn-lg" %>
+			<br>
+			<br>
+			<%= link_to 'Course Resources',classrooms_mates_path, :class => "btn btn-default btn-lg" %>
+			</div><!-- list-group -->
+		</div><!-- panel ended-->
+	</div>
+</div>
+
+<div class="text-center">
+<%= link_to "Back", :back, :class => "btn btn-default btn-lg" %>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+        <p>
+            <%= raw(@classroom.body) %>
+            
+            <br/>
+        </p>
+        
+</div>
+<br> 
+<br>
+<br>

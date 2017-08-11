@@ -1,0 +1,24 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+    <div class="container">
+     <h1 class="text-left"><strong> Welcome <% if current_user %><%= current_user.user_name %><% end %> </strong> </h1>
+    <br>
+    
+    <div class="row" id="features">
+    	<% for blog in @blogs %>
+				<div class="col-sm-4 feature">
+						<%= raw(blog.blopic) %>
+						<h2 class="text-center"><%= link_to blog.title, blog_path(blog) %></h2>
+                        <h6 class="text-muted text-right"><%= blog.writer %></h6>						
+				</div><!-- end feature -->
+		<% end %>
+    </div>
+    
+            </div>
+    
+
+
+

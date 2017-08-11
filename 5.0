@@ -1,0 +1,2 @@
+ERROR: "bundle install" was called with arguments ["jquery-rails", "C:/Users/USER"]
+Usage: "bundle install [OPTIONS]"

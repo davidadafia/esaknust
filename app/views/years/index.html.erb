@@ -1,0 +1,24 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+       <p class="notice text-center" style="background-color: #dff0d8;"><%= notice %></p>
+       <p class="alert text-center"><%= alert %></p>
+   <br>
+<div class="row">
+    <div class="container">
+        <div class="text-center">                    
+        	<h2 class="text-center intro-text"><strong> SELECT YOUR YEAR</strong> </h2>
+        	<div class="text-center ">       
+        		<div class="col-md-12 feature">
+            		<% for year in @years %>
+                		<strong><h2><%= link_to year.title, year_path(year), :class => "btn btn-default btn-lg" %></h2></strong>
+            		<% end %>
+        		</div><!-- end feature -->
+        	</div>
+        </div><!-- end features -->            
+    </div>
+</div>
+<br>
+<br>
