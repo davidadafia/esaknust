@@ -1,8 +1,4 @@
 Rails.application.routes.draw do
-  get 'courses/index'
-
-  get 'courses/show'
-
   get 'years/index'
 
   get 'years/show'
@@ -53,10 +49,6 @@ Rails.application.routes.draw do
 
   resources :years do
     resources :title, :id
-  end
-
-  resources :courses do
-    resources :title, :id, :years_id, :classrooms
   end
 
   resources :classrooms do
