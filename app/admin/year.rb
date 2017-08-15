@@ -3,8 +3,8 @@ ActiveAdmin.register Year do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
-	
- permit_params :title
+
+ permit_params :title, :id
 #
 # or
 #
@@ -13,6 +13,7 @@ ActiveAdmin.register Year do
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
+
 
 	index do
     column :id

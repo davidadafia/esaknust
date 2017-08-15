@@ -16,8 +16,8 @@ ActiveAdmin.register Classroom do
 
 	index do
     column :id
-    column :year_id
     column :title
+    column :year_id
     column :created_at
     column '' do |classroom|
       link_to 'VIEW', admin_classroom_path(classroom) if authorized? :update, classroom
