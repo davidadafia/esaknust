@@ -6,6 +6,7 @@ class ClassroomsController < ApplicationController
   def show
   	@classroom = Classroom.find(params[:id])
     @classrooms = Classroom.all
+    commontator_thread_show(@classroom)
   end
 
   def mates
