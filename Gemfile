@@ -8,6 +8,7 @@ gem 'rails_12factor'
 gem 'pg', '~> 0.20'
 gem 'activeadmin'
 
+gem 'commontator', '~> 4.11.1'
 # Plus integrations with:
 gem 'devise'
 gem 'cancan' # or cancancan

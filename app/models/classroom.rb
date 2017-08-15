@@ -4,4 +4,5 @@ class Classroom < ActiveRecord::Base
     belongs_to :year
 	accepts_nested_attributes_for :year
 
+	acts_as_commontable
 end
