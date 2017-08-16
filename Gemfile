@@ -9,6 +9,7 @@ gem 'pg', '~> 0.20'
 gem 'activeadmin'
 
 gem 'commontator', '~> 4.11.1'
+gem 'acts_as_votable'
 # Plus integrations with:
 gem 'devise'
 gem 'cancan' # or cancancan
