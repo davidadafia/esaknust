@@ -36,6 +36,13 @@
 	</div>
 </div>
 <%= commontator_thread(@classroom) %>
+
+<% @classrooms.each do |classroom| %>
+	<div>
+<%= commontator_thread(@classroom) %>	
+	</div>
+	<%end%>
+
 <div class="text-center">
 <%= link_to "Back", :back, :class => "btn btn-default btn-lg" %>
 </div>
