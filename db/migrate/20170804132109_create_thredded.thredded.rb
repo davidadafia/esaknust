@@ -1,7 +1,6 @@
 # This migration comes from thredded (originally 20160329231848)
 # frozen_string_literal: true
 
-require 'thredded/base_migration'
 
 # rubocop:disable Metrics/ClassLength
 # rubocop:disable Metrics/MethodLength

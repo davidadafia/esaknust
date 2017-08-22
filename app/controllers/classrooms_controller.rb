@@ -6,6 +6,10 @@ class ClassroomsController < ApplicationController
   def show
   	@classroom = Classroom.find(params[:id])
     @classrooms = Classroom.all
+    @outline = Outline.find(params[:id])
+    @outlines = Outline.all
+    @resource = Resource.find(params[:id])
+    @resources =Resource.all
     commontator_thread_show(@classroom)
   end
 

@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'resources/show'
+
+  get 'outlines/show'
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   get 'years/index'
@@ -33,7 +37,6 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
    root 'homes#index'
 
-   mount Thredded::Engine => '/forum'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
@@ -47,6 +50,8 @@ Rails.application.routes.draw do
   resources :courses
   resources :classrooms
   resources :blogs
+  resources :resources
+  resources :outlines
 
   resources :years do
     resources :title, :id
@@ -58,6 +63,14 @@ Rails.application.routes.draw do
 
   resources :blogs do
     resources :title, :id, :body, :blopic, :writer
+  end
+
+  resources :resources do
+      resources :title, :id, :body, :classrooms_id
+  end
+
+  resources :outlines do
+      resources :title, :id, :body, :classrooms_id
   end
 
   # Example resource route with options:

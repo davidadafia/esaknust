@@ -10,13 +10,13 @@ gem 'activeadmin'
 
 gem 'commontator', '~> 4.11.1'
 gem 'acts_as_votable'
+gem 'gravatar', '~> 1.0'
 # Plus integrations with:
 gem 'devise'
 gem 'cancan' # or cancancan
 gem 'draper'
 gem 'pundit'
 
-gem 'thredded', '~> 0.13.2'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 gem "font-awesome-rails"

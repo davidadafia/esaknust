@@ -3,15 +3,18 @@
     <br>
     <br>
     <br>
-    	<div class="container">
-    		<p><%= raw(@blog.body) %></p>
+    <div class="container">
+    	
+    		<div class="text-center"> <%= @outline.title %></div>
+    		<p><%= raw(@outline.body) %></p>
     		<br>
-        	
+    	
         	<br>
-            <%= commontator_thread(@blog) %>
-        </div>
+    </div>
     <br>
 <div class="text-center">
 <%= link_to "Back", :back, :class => "btn btn-default btn-lg" %>
 </div>
 <br>
+
+

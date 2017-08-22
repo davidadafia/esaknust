@@ -6,6 +6,7 @@ class BlogsController < ApplicationController
   def show
     @blog = Blog.find(params[:id])
     @blogs = Blog.all
+    commontator_thread_show(@blog)
   end
 
   def create
