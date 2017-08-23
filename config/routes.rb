@@ -1,17 +1,18 @@
 Rails.application.routes.draw do
+  devise_for :users do
+    get '/users/sign_out' => 'devise/sessions#destroy'
+  end
+  
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+
   get 'resources/show'
 
   get 'outlines/show'
 
-  devise_for :admin_users, ActiveAdmin::Devise.config
-  ActiveAdmin.routes(self)
   get 'years/index'
 
   get 'years/show'
-
-  devise_for :users do
-    get '/users/sign_out' => 'devise/sessions#destroy'
-  end
 
   get 'classrooms/index'
 
@@ -47,7 +48,6 @@ Rails.application.routes.draw do
   #   resources :products
 
   resources :years
-  resources :courses
   resources :classrooms
   resources :blogs
   resources :resources

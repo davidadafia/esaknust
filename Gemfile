@@ -10,7 +10,7 @@ gem 'activeadmin'
 
 gem 'commontator', '~> 4.11.1'
 gem 'acts_as_votable'
-gem 'gravatar', '~> 1.0'
+gem 'gravtastic'
 # Plus integrations with:
 gem 'devise'
 gem 'cancan' # or cancancan
