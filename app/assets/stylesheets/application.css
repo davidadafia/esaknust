@@ -14,7 +14,7 @@
  *= require_self
  *= require commontator/application
  */
-@import "font-awesome.min.css";
+@import "font-awesome";
 
 /*!
  * Start Bootstrap - Grayscale v3.3.7+1 (http://startbootstrap.com/template-overviews/grayscale)
