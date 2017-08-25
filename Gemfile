@@ -10,7 +10,7 @@ gem 'activeadmin'
 
 gem 'commontator', '~> 4.11.1'
 gem 'acts_as_votable'
-gem 'gravtastic'
+# gem 'avatars_for_rails'
 # Plus integrations with:
 gem 'devise'
 gem 'cancan' # or cancancan

@@ -10,7 +10,7 @@
   <title>Esaknust</title>
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'default', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag    "/assets/bootstrap.css" %>
   
 </head>
@@ -44,7 +44,7 @@
                         <%= link_to 'BLOG',blogs_index_path %>
                     </li>
                     <li> <% if current_user %>
-                    <%= link_to('LOGOUT', destroy_user_session_path, :method => :delete) %>
+                    <%= link_to 'LOGOUT', '/users/sign_out' %>
                     <% else %></li>
                     <li class="page-scroll">  <%= link_to 'LOGIN', '/users/sign_in' %></li>
                     <li class="page-scroll"> <%= link_to 'SIGNUP', '/users/sign_up' %></li>
