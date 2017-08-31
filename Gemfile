@@ -6,7 +6,7 @@ gem 'rails', '4.2.6'
 gem 'rails_12factor'
 # Use sqlite3 as the database for Active Record
 gem 'pg', '~> 0.20'
-gem 'active_admin', :git => 'https://github.com/gregbell/active_admin.git'
+gem 'active_admin'
 
 gem 'commontator', '~> 4.11.1'
 gem 'acts_as_votable'
