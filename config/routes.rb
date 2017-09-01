@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   end
   
   devise_for :admin_users, ActiveAdmin::Devise.config
-  ActiveAdmin.routes(self)
+  
 
   get 'resources/show'
 
@@ -113,4 +113,5 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  ActiveAdmin.routes(self)
 end
