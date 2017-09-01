@@ -1,12 +1,10 @@
 Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
+
   devise_for :users do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
   
-
-  
-
   get 'resources/show'
 
   get 'outlines/show'
