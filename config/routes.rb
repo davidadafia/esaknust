@@ -1,10 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users do
     get '/users/sign_out' => 'devise/sessions#destroy'
-  end
-  
-  devise_for :admin_users, ActiveAdmin::Devise.config
-  
+  end  
 
   get 'resources/show'
 
@@ -30,6 +27,8 @@ Rails.application.routes.draw do
 
   get 'homes/index'
 
+
+  devise_for :admin_users, ActiveAdmin::Devise.config
 
   mount Commontator::Engine => '/commontator'
   # The priority is based upon order of creation: first created -> highest priority.
