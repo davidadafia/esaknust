@@ -20,7 +20,7 @@ ActiveAdmin.register Outline do
     column :classroom_id
     column :created_at
     column '' do |outline|
-      link_to 'VIEW', admin_outline_path(outline) if authorized? :update, outline
+      link_to 'VIEW', admin_outline_path(outline), if authorized? :update, outline
     end
   end
 end
