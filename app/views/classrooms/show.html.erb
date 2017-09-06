@@ -4,42 +4,44 @@
 <br>
 <br>
 <br>
-<div class="container">
-	<div class="row">
-		<div class="text-center">
+
+	<div class="container">
+		<div class="col-sm-10 text-center">
 				<h2><strong><%= @classroom.title %></strong></h2>
 		</div>
 		<br>
+
 		<div class="col-sm-10">
-			<h2><strong>ASK QUESTION</strong></h2>
-			<br>
+		<div class="container"><%= raw(@classroom.body) %> </div>
+		<br>
+			<br><p>Ask any question we will answer asap.</p>
 			<div class="container col-sm-12"> <%= commontator_thread(@classroom) %> </div>
 		</div>
-		
-		<div class="panel col-sm-2">
+	<div class="row">
+		<div class="panel col-sm-2 text-center">
 			<div class="panel-heading">
 				<h3 class="panel-title"><%= current_user.user_name %></h3>
 			</div><!-- end panel-heading -->
 			<!--<img src="/assets/esa1.jpg", class="img-responsive img-thumbnail img-circle">
-            <p class="text-muted"><%= link_to 'Edit Profile', '/users/edit' %></p>			-->			
+            <p class="text-muted"><%= link_to 'Edit Profile', '/users/edit' %></p>			
             <br>
-        	<div class="list-group">
-			<!--<%= link_to 'Course Mates',classrooms_mates_path, :class => "btn btn-default btn-lg" %>-->
+        	<div class="list-group text-center">
+			<%= link_to 'Course Mates',classrooms_mates_path, :class => "btn btn-default btn-md text-center" %>-->
 			<br>
 			<br>
             <% for outline in @classroom.outlines %>
-			<%= link_to 'Course Outline',outline_path(outline), :class => "btn btn-default btn-lg" %>
+			<%= link_to 'Course Outline',outline_path(outline), :class => "btn btn-default btn-md text-center" %>
 			<% end %>
 			<br>
 			<br>
 			<% for resource in @classroom.resources %>
-			<%= link_to 'Course Resources',resource_path(resource), :class => "btn btn-default btn-lg" %>
+			<%= link_to 'Course Resources',resource_path(resource), :class => "btn btn-default btn-md text-center" %>
 			<% end %>
 			</div><!-- list-group -->
 		</div><!-- panel ended-->
 	</div>
 </div>
-
+</div>
 <div class="text-center">
 <%= link_to "Back", :back, :class => "btn btn-default btn-lg" %>
 </div>

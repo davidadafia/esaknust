@@ -1,8 +1,7 @@
 class UsersController < ApplicationController
-
+	before_action :authenticate_user!
 	def show
-	sign_out :user
-    redirect_to '/homes/index'
+	
  	end	 	
 
 end

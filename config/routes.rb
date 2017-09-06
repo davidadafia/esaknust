@@ -4,7 +4,10 @@ Rails.application.routes.draw do
   devise_for :users do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
-  
+  get 'users/index'
+
+  get 'users/show' 
+
   get 'resources/show'
 
   get 'outlines/show'
@@ -51,6 +54,7 @@ Rails.application.routes.draw do
   resources :blogs
   resources :resources
   resources :outlines
+  resources :users
 
   resources :years do
     resources :title, :id

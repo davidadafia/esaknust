@@ -100,7 +100,7 @@ a {
 a:hover,
 a:focus {
   text-decoration: none;
-  color: #1d9b6c;
+  color: red;
 }
 .light {
   font-weight: 700;
@@ -300,7 +300,9 @@ header {
   border-radius: 0;
 }
 
-
+.btn a{
+  text-decoration-style: none;
+}
 
 .btn-default {
   border: 1px solid #42DCA3;

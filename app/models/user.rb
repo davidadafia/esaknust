@@ -10,5 +10,8 @@ class User < ActiveRecord::Base
       params.require(:user).permit(:user_name, :whatsapp, :email, :password, :password_confirmation)
    end   
 
+   belongs_to :classroom
+   accepts_nested_attributes_for :classroom
+
 end
 
