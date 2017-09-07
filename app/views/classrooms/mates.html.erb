@@ -6,6 +6,8 @@
 <br>
 <div class="container">
 	<h2 class="text-center "><strong>Economics Students</strong></h2>
+	<div class="text-center"> There are <%= User.count %> users.</div>
+	<br>
 	<% @users.each do |user| %>
 	<div class="text-center col-sm-2">	
 		<img src="/assets/SelormAdafia.png", class="img-responsive img-thumbnail img-circle">
