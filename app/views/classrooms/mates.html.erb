@@ -9,7 +9,7 @@
 	<h1 class="text-center"> There are <%= User.count %> users.</h1>
 	<br>
 	<% @users.each do |user| %>
-	<div class="panel text-center col-sm-2">	
+	<div class="text-center col-sm-2" style="background-color: #99c961">	
 		<p><%= user.user_name %></p><br>
 		<p><%= user.whatsapp %></p>
 	</div>
