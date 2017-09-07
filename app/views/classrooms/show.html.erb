@@ -10,12 +10,12 @@
 				<h2><strong><%= @classroom.title %></strong></h2>
 		</div>
 		<div class="row" id="features">
-			<div class="col-sm-3 text-center">
+			<div class="col-sm-4 text-center">
 				<% for outline in @classroom.outlines %>
 				<%= link_to 'Course Outline',outline_path(outline), {:style=>'text-decoration:none;', :class => "btn btn-default btn-lg text-center"} %>
 				<% end %>
 			</div>
-			<div class="col-sm-3 text-center">
+			<div class="col-sm-4 text-center">
 				<% for resource in @classroom.resources %>
 				<%= link_to 'Course Resources',resource_path(resource), {:style=>'text-decoration:none;', :class => "btn btn-default btn-lg text-center"} %>
 				<% end %>
@@ -23,7 +23,7 @@
 			<!--<div class="col-sm-3 text-center">
 				<%= link_to 'Course Mates',classrooms_mates_path, {:style=>'text-decoration:none;', :class => "btn btn-default btn-lg text-center"} %>
 			</div>-->
-			<div class="col-sm-3 text-center">
+			<div class="col-sm-4 text-center">
 				<h3 class="panel-title"><%= link_to (current_user.user_name), '/users/edit',{:style=>'background-color: #dff0f8;', :class => "btn btn-default btn-lg text-center"} %> </h3>
 				<!--<img src="/assets/esa1.jpg", class="img-responsive img-thumbnail img-circle">-->			
 			</div>
