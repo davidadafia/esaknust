@@ -180,6 +180,10 @@ a:focus {
 header {
   background: url(header.jpg) no-repeat bottom center scroll;
 }
+section {
+  background: url(header1.jpg) no-repeat bottom center scroll;
+}
+
 
 .intro {
   display: table;
@@ -298,16 +302,18 @@ header {
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   border-radius: 0;
+  text-decoration: none;
 }
 
-.btn a{
-  text-decoration-style: none;
+.btn .btn-default{
+  text-decoration: none;
 }
 
 .btn-default {
   border: 1px solid #42DCA3;
   color: #42DCA3;
   background-color: transparent;
+  text-decoration: none;
 }
 .btn-default:hover,
 .btn-default:focus {
