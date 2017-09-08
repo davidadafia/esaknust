@@ -5,28 +5,27 @@
 <br>
 <br>
 
+
+
 	<div class="container">
 		<div class="col-sm-12 text-center">
-				<h2><strong><%= @classroom.title %></strong></h2>
+				<h1><strong><%= @classroom.title %></strong></h1>
 		</div>
+		<h3 class="text-right">Settings <%= link_to '', '/users/edit', {:style=>'text-decoration:none; font-size:30px;', :class => "fa fa-gear fa-spin"}%> </h3>
+		<h2><strong>Welcome <%= current_user.user_name %></strong></h2>
+
 		<div class="row" id="features">
-			<div class="col-sm-4 text-center">
-				<% for outline in @classroom.outlines %>
-				<%= link_to 'Course Outline',outline_path(outline), {:style=>'text-decoration:none;', :class => "btn btn-default btn-lg text-center"} %>
+			    <% for outline in @classroom.outlines %>
+				<%= link_to(image_tag("/assets/outline.jpg", :class => "col-sm-6" ), outline_path(outline)) %>
 				<% end %>
-			</div>
-			<div class="col-sm-4 text-center">
+
 				<% for resource in @classroom.resources %>
-				<%= link_to 'Course Resources',resource_path(resource), {:style=>'text-decoration:none;', :class => "btn btn-default btn-lg text-center"} %>
+				<%= link_to(image_tag("/assets/resource.jpg", :class => "col-sm-6" ), resource_path(resource)) %>
 				<% end %>
-			</div>
+			
 			<!--<div class="col-sm-3 text-center">
 				<%= link_to 'Course Mates',classrooms_mates_path, {:style=>'text-decoration:none;', :class => "btn btn-default btn-lg text-center"} %>
 			</div>-->
-			<div class="col-sm-4 text-center">
-				<h3 class="panel-title"><%= link_to (current_user.user_name), '/users/edit',{:style=>'background-color: #dff0f8;', :class => "btn btn-default btn-lg text-center"} %> </h3>
-				<!--<img src="/assets/esa1.jpg", class="img-responsive img-thumbnail img-circle">-->			
-			</div>
 		</div>
 		<br>
 		<br>
