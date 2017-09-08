@@ -16,11 +16,11 @@
 
 		<div class="row" id="features">
 			    <% for outline in @classroom.outlines %>
-				<%= link_to(image_tag("/assets/outline.jpg", :class => "col-sm-6" ), outline_path(outline)) %>
+				<%= link_to(image_tag("/assets/outline.jpg", :class => "col-sm-6 img-responsive img-thumbnail" ), outline_path(outline)) %>
 				<% end %>
 
 				<% for resource in @classroom.resources %>
-				<%= link_to(image_tag("/assets/resource.jpg", :class => "col-sm-6" ), resource_path(resource)) %>
+				<%= link_to(image_tag("/assets/resource.jpg", :class => "col-sm-6 img-responsive img-thumbnail" ), resource_path(resource)) %>
 				<% end %>
 			
 			<!--<div class="col-sm-3 text-center">
