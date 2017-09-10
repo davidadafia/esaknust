@@ -11,6 +11,8 @@ class ClassroomsController < ApplicationController
     @outlines = Outline.all
     @resource = Resource.find(params[:id])
     @resources =Resource.all
+    @question = Question.find(params[:id])
+    @questions =Question.all
     commontator_thread_show(@classroom)
   end
 

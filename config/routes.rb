@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'questions/index'
+
+  get 'questions/show'
+
   devise_for :admin_users, ActiveAdmin::Devise.config
 
   devise_for :users do
@@ -49,6 +53,7 @@ Rails.application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
+  resources :questions
   resources :years
   resources :classrooms
   resources :blogs
@@ -73,6 +78,9 @@ Rails.application.routes.draw do
   end
 
   resources :outlines do
+      resources :title, :id, :body, :classrooms_id
+  end
+  resources :questions do
       resources :title, :id, :body, :classrooms_id
   end
 
