@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'parts/index'
+
+  get 'parts/show'
+
   get 'questions/index'
 
   get 'questions/show'
@@ -60,6 +64,7 @@ Rails.application.routes.draw do
   resources :resources
   resources :outlines
   resources :users
+  resources :parts
 
   resources :years do
     resources :title, :id
@@ -83,7 +88,9 @@ Rails.application.routes.draw do
   resources :questions do
       resources :title, :id, :body, :classrooms_id
   end
-
+  resources :parts do
+      resources :title, :id, :body, :questions_id
+  end
   # Example resource route with options:
   #   resources :products do
   #     member do

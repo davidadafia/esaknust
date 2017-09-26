@@ -5,10 +5,9 @@
     <br>
     <div class="container">
     	
-    		
-            <% for part in @question.parts %>
-                <%= link_to(image_tag("/assets/tmz3.jpg", :class => "col-sm-4 img-responsive img-thumbnail" ), part_path(part)) %>
-                <% end %>
+    		<div class="text-center"> <h2><%= @part.title %></h2></div>
+    		<p><%= raw(@part.body) %></p>
+    		<br>
     	
         	<br>
     </div>

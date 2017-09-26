@@ -3,10 +3,13 @@ class QuestionsController < ApplicationController
   def index
   end
   def show
+    @part = Part.find(params[:id])
+    @parts = Part.all
   	@question = Question.find(params[:id])
   	@questions = Question.all
   	@classroom = Classroom.find(params[:id])
     @classrooms = Classroom.all
+    
   end
 
   def create
@@ -23,5 +26,6 @@ private
   def question_params
     params.require(:question).permit(:title, :body, :id)
     params.require(:classroom).permit(:classroom_id)
+    params.require(:part).permit(:part_id)
   end   
 end
