@@ -3,10 +3,10 @@ class QuestionsController < ApplicationController
   def index
   end
   def show
-    @part = Part.find(params[:id])
-    @parts = Part.all
   	@question = Question.find(params[:id])
   	@questions = Question.all
+    @part = Part.find(params[:id])
+    @parts = Part.all
   	@classroom = Classroom.find(params[:id])
     @classrooms = Classroom.all
     
