@@ -5,7 +5,6 @@ class QuestionsController < ApplicationController
   def show
   	@question = Question.find(params[:id])
   	@questions = Question.all
-    @part = Part.find(params[:id])
     @parts = Part.all
   	@classroom = Classroom.find(params[:id])
     @classrooms = Classroom.all
