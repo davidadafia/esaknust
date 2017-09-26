@@ -7,7 +7,7 @@
     	
     		
             <% for part in @question.parts %>
-                <%= link_to(image_tag("/assets/tmz3.jpg", :class => "col-sm-4 img-responsive img-thumbnail" ), part_path(part)) %>
+                <%= link_to (part.title), part_path(part), :class => "btn btn-default btn-lg col-lg-6" %>
                 <% end %>
     	
         	<br>
