@@ -45,15 +45,7 @@ html {
 }
 
 
-@media (max-width: 490px) {
-.quote {
-  position: absolute;
-  bottom: 100px;
-  right: 5px;
-  width: 100%;
-  font-size: 14px;
-}
-}
+
 
 
 .btn-social {
