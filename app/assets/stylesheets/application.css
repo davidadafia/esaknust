@@ -36,6 +36,35 @@ html {
   height: 100%;
 }
 
+.quote {
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
+  width: 300px;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+.quote {
+  position: absolute;
+  bottom: 245px;
+  right: 5px;
+  width: 100%;
+  font-size: 14px;
+}
+
+@media (max-width: 490px) {
+.quote {
+  position: absolute;
+  bottom: 100px;
+  right: 5px;
+  width: 100%;
+  font-size: 14px;
+}
+
+}
+
+
 .btn-social {
   display: inline-block;
   height: 50px;
