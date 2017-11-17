@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :pets
   get 'parts/index'
 
   get 'parts/show'
