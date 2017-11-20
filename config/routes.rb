@@ -1,12 +1,4 @@
 Rails.application.routes.draw do
-  resources :pets
-  get 'parts/index'
-
-  get 'parts/show'
-
-  get 'questions/index'
-
-  get 'questions/show'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 
