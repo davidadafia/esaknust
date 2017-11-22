@@ -11,26 +11,33 @@
 		<div class="col-sm-12 text-center">
 				<h1><strong><%= @classroom.title %></strong></h1>
 		</div>
-		<h3 class="text-right">Settings <%= link_to '', '/users/edit', {:style=>'text-decoration:none; font-size:30px;', :class => "fa fa-gear fa-spin"}%> </h3>
+		
 		<h2><strong>Welcome <%= current_user.user_name %></strong></h2>
 
 		<div class="row" id="features">
+			<div class="col-sm-3">
+				<h3 class="text-left">Settings <%= link_to '', '/users/edit', {:style=>'text-decoration:none; font-size:30px;', :class => "fa fa-gear fa-spin"}%> </h3>
 			    <% for outline in @classroom.outlines %>
-				<%= link_to(image_tag("/assets/tmz.jpg", :class => "col-sm-4 img-responsive img-thumbnail" ), outline_path(outline)) %>
+			    <strong><h2><%= link_to "Time Table", outline_path(outline), :class => "btn btn-default btn-lg" %></h2></strong>
 				<% end %>
 
 				<% for resource in @classroom.resources %>
-				<%= link_to(image_tag("/assets/tmz2.jpg", :class => "col-sm-4 img-responsive img-thumbnail" ), resource_path(resource)) %>
+				<strong><h2><%= link_to "PDF's", resource_path(resource), :class => "btn btn-default btn-lg" %></h2></strong>
 				<% end %>
 
 				<% for question in @classroom.questions %>
-				<%= link_to(image_tag("/assets/tmz3.jpg", :class => "col-sm-4 img-responsive img-thumbnail" ), question_path(question)) %>
+				<strong><h2><%= link_to "Questions", question_path(question), :class => "btn btn-default btn-lg" %></h2></strong>
 				<% end %>
+				
+			</div>
+			<div class="col-sm-9">
+				<div class="container"><%= raw(@classroom.body) %> </div>
+			</div>
 		</div>
 		<br>
 		<br>
 		<div>
-			<div class="container"><%= raw(@classroom.body) %> </div>
+			
 			<br>
 			<br><p class="text-center">Whatsapp, text or call 0242911291 in case of any issues or quesitons</p>
 		

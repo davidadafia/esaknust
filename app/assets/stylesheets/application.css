@@ -44,7 +44,11 @@ html {
   font-size: 18px;
 }
 
-
+.cortes {
+  position: absolute;
+  bottom: 10px;
+  font-size: 42px;
+}
 
 .btn-social {
   display: inline-block;
