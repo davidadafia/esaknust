@@ -15,8 +15,8 @@
 		<h2><strong>Welcome <%= current_user.user_name %></strong></h2>
 
 		<div class="row" id="features">
-			<div class="col-sm-3">
-				<h3 class="text-left">Settings <%= link_to '', '/users/edit', {:style=>'text-decoration:none; font-size:30px;', :class => "fa fa-gear fa-spin"}%> </h3>
+			<div class="col-sm-3 text-center">
+				<h3 class="text-center">Settings <%= link_to '', '/users/edit', {:style=>'text-decoration:none; font-size:30px;', :class => "fa fa-gear fa-spin"}%> </h3>
 			    <% for outline in @classroom.outlines %>
 			    <strong><h2><%= link_to "Time Table", outline_path(outline), :class => "btn btn-default btn-lg" %></h2></strong>
 				<% end %>
