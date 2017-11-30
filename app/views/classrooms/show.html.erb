@@ -14,19 +14,31 @@
 		
 		<h2><strong>Welcome <%= current_user.user_name %></strong></h2>
 
+		
+		
+
 		<div class="row" id="features">
 			<div class="col-sm-3 text-center">
+			<form class="form-inline text-center">
+				<%= simple_form_for @user do |f| %>
+				<h3><%= f.label :what_Level_are_you_in? %></h3>
+   				<span><h3><%= f.input :level, collection: 1..4 %></h3></span>
+   			</form>
+   			
+   			<%= f.button :submit %>
+			<% end %>
+			<br>
 				<h3 class="text-center">Settings <%= link_to '', '/users/edit', {:style=>'text-decoration:none; font-size:30px;', :class => "fa fa-gear fa-spin"}%> </h3>
 			    <% for outline in @classroom.outlines %>
-			    <strong><h2><%= link_to "Time Table", outline_path(outline), :class => "btn btn-default btn-lg" %></h2></strong>
+			    <strong><h2><%= link_to "Time Table", outline_path(outline), :class => "btn btn-danger btn-lg" %></h2></strong>
 				<% end %>
 
 				<% for resource in @classroom.resources %>
-				<strong><h2><%= link_to "PDF's", resource_path(resource), :class => "btn btn-default btn-lg" %></h2></strong>
+				<strong><h2><%= link_to "PDF's", resource_path(resource), :class => "btn btn-info btn-lg" %></h2></strong>
 				<% end %>
 
 				<% for question in @classroom.questions %>
-				<strong><h2><%= link_to "Questions", question_path(question), :class => "btn btn-default btn-lg" %></h2></strong>
+				<strong><h2><%= link_to "Questions", question_path(question), :class => "btn btn-warning btn-lg" %></h2></strong>
 				<% end %>
 				
 			</div>

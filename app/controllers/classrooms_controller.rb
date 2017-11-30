@@ -13,6 +13,8 @@ class ClassroomsController < ApplicationController
     @resources =Resource.all
     @question = Question.find(params[:id])
     @questions =Question.all
+    @user = User.find(params[:id])
+    @users = User.all
     commontator_thread_show(@classroom)
   end
 
@@ -29,6 +31,8 @@ class ClassroomsController < ApplicationController
 	  classroom.update!(classroom_params)
 	  redirect_to classroom
   end
+
+
 
 private
   def classroom_params

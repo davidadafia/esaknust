@@ -17,6 +17,7 @@ gem 'cancan' # or cancancan
 gem 'draper'
 gem 'pundit'
 
+gem 'simple_form'
 # gem 'paperclip', '~> 5.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
