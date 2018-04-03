@@ -1,88 +1,310 @@
- <!-- Intro Header -->
-    <header class="intro">
-        <div class="intro-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12" >
-                        <h2 class="brand-heading">5 TIPS TO PASS YOUR EXAMS WHEN YOU HAVEN'T STUDIED.</h2>
-                        <p class="intro-text">
-                            <br></p>
-                        <a href="https://esaknust.herokuapp.com/blogs/2" class="btn btn-default btn-lg">FIND OUT HOW</a>
-                    </div>
-                    <br>
-                    <br>
-                    <div class="quote">
-                        <br>
-                        <i>"It's not who you think you're that holds you back  "<b>but who you think you're not</b>."</i> - Your better self </div>
+  <!-- Section: home video -->
+  <section id="intro" class="home-video text-light">
+    <div class="home-video-wrapper">
+
+      <div class="homevideo-container">
+        <div id="P1" class="bg-player" style="display:block; margin: auto; background: rgba(0,0,0,0.5)" data-property="{videoURL:'https://www.youtube.com/watch?v=8R2-revQoAM',containment:'.homevideo-container', quality: '144p', showControls: false, autoPlay:true, mute:true, startAt:2, opacity:1, speed:0.5}"></div>
+      </div>
+      <div class="overlay">
+        <div class="text-center video-caption">
+          <div class="wow bounceInDown" data-wow-offset="0" data-wow-delay="0.8s">
+            <h1 class="big-heading font-light"><span id="js-rotating">ECONOMICS STUDENTS ASSOCIATION, BRAINS BEHIND GREAT DECISIONS, KWAME NKRUMAH UNIVERSITY OF SCIENCE AND TECHNOLOGY. </span></h1>
+          </div> 
+          <br>
+          <br>
+          <div class="wow bounceInUp" data-wow-offset="0" data-wow-delay="1s">
+            <div class="margintop-30">
+              <a href="#about" class="btn btn-blood" id="btn-scroll" style="color: black;">START HERE</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /Section: intro -->
+
+
+  <!-- Navigation -->
+  <div id="navigation">
+    <nav class="navbar navbar-custom" role="navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2 mob-logo">
+            <div class="row">
+              <div class="site-logo">
+                <a class="navbar-brand" href="/homes/index">
+                     <span class="light">ESA KNUST</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-10 mob-menu">
+            <div class="row">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+                                                <i class="fa fa-bars"></i>
+                                                </button>
+              </div>
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="menu">
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="active"><a href="#intro">Home</a></li>
+                  <li><%= link_to 'courses',years_index_path %></li>
+                  <li><a href="#service">portal</a></li>
+                  <li><a href="#works">Works</a></li>
+                  
+                  <li> <% if current_user %>
+                    <%= link_to 'LOGOUT', '/users/sign_out' %>
+                    <% else %></li>
+                    <li class="page-scroll">  <%= link_to 'LOGIN', '/users/sign_in' %></li>
+                    <li class="page-scroll"> <%= link_to 'SIGNUP', '/users/sign_up' %></li>
+                    <% end %>
+                </ul>
+              </div>
+              <!-- /.Navbar-collapse -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.container -->
+    </nav>
+  </div>
+  <!-- /Navigation -->
+
+<!-- Section: about -->
+  <section id="about" class="home-section color-dark bg-white">
+    <div class="container marginbot-50">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <div class="wow flipInY" data-wow-offset="0" data-wow-delay="0.4s">
+            <div class="section-heading text-center">
+              <h2 class="h-bold">About</h2>
+              <div class="divider-header"></div>
+              <p>Economics Students’ Association (ESA – KNUST) is the legitimate student body of the Department of Economics. </p>
+              <br>
+              <p>Its membership includes all undergraduate students in the Department of Economics as well as interested postgraduate students and alumina that form the Technical Advisory Board of the Association.</p>
+              <br>
+              <p>Our core aim is to bring up decisions that enhances holistic welfare of its members and to establish a community that will bring members together to network and help one another. </p>
+              <br>
+              <div class="text-center"><%= link_to 'LEARN MORE',abouts_index_path, :class => "btn btn-blood", :style => "color: black; "%></div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div> 
+    <br>
+    <br>
+    <div class="text-center">
+      <div class="container">
+
+
+        <div class="row">
+        <div class="text-center"><h2>EXECUTIVES</h2></div>
+        <br>
+       
+          <div class="col-xs-6 col-sm-3 col-md-2">
+            <div class="team-wrapper-big wow bounceInUp" data-wow-delay="0.2s">
+              <div class="team-wrapper-overlay">
+                <h5></h5>
+                <p>EMMANUEL HANSON<br>
+                  PRESIDENT
+                </p>
+                
+              </div>
+              <img src="/assets/esa2.jpg", class="img-responsive img-thumbnail img-circle">
+            </div>
+          </div>
+
+          <div class="col-xs-6 col-sm-3 col-md-2">
+            <div class="team-wrapper-big wow bounceInUp" data-wow-delay="0.4s">
+              <div class="team-wrapper-overlay">
+                <h5>ODOI EDWIN NII ODOI JUNIOR</h5>
+                <p>VICE PRESIDENT</p>
+              </div>
+              <img src="/assets/esa6.jpg", class="img-responsive img-thumbnail img-circle">
+            </div>
+          </div>
+
+          <div class="col-xs-6 col-sm-3 col-md-2">
+            <div class="team-wrapper-big wow bounceInUp" data-wow-delay="0.6s">
+              <div class="team-wrapper-overlay">
+                <h5>Ridout Quaicoe</h5>
+                <p> FIANCIAL SECRETARY</p>
+              </div>
+              <img src="/assets/esa3.jpg", class="img-responsive img-thumbnail img-circle">
+            </div>
+          </div>
+
+          <div class="col-xs-6 col-sm-3 col-md-2">
+            <div class="team-wrapper-big wow bounceInUp" data-wow-delay="0.8s">
+              <div class="team-wrapper-overlay">
+                <h5>Justice Kwakye Boateng</h5>
+                <p>ORGANISING SECETARY</p>
+              </div>
+              <img src="/assets/esa5.jpg", class="img-responsive img-thumbnail img-circle">
+            </div>
+          </div>
+
+          <div class="col-xs-6 col-sm-3 col-md-2">
+            <div class="team-wrapper-big wow bounceInUp" data-wow-delay="1s">
+              <div class="team-wrapper-overlay">
+                <h5>Schaneil Awula Naa Dede Acquah</h5>
+                <p>GENERAL SECRETARY</p>
+              </div>
+              <img src="/assets/esa1.jpg", class="img-responsive img-thumbnail img-circle">
+            </div>
+          </div>
+
+          <div class="col-xs-6 col-sm-3 col-md-2">
+            <div class="team-wrapper-big wow bounceInUp" data-wow-delay="1.2s">
+              <div class="team-wrapper-overlay">
+                <h5>Linda Nkrumah</h5>
+                <p>WOMEN'S COMMISSIONER</p>
+              </div>
+              <img src="/assets/esa4.jpg", class="img-responsive img-thumbnail img-circle">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /Section: about -->
+
+  <!-- Section: parallax 1 -->
+  <section id="parallax1" class="home-section parallax text-light" data-stellar-background-ratio="0.5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="text-center">
+            <h2 class="big-heading highlight-dark wow bounceInDown" data-wow-delay="0.2s">“BRAINS BEHIND GREAT DECISIONS”</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: services -->
+    <!-- Section: services -->
+  <section id="service" class="home-section color-dark bg-white"> 
+  <div class="container">
+    <div class="row text-center">
+    <div class="container marginbot-50">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <div class="wow flipInY" data-wow-offset="0" data-wow-delay="0.4s">
+            <div class="section-heading text-center">
+              <h2 class="h-bold">COURSES</h2>
+              <div class="divider-header"></div>
+              <h3>SIGN UP TO VIEW COURSES</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    
+        <div class="col-lg-12 col-sm-12">
+            <div class="hovereffect wow fadeInRight" data-wow-delay="0.4s">
+                <img src="/assets/bus.png", class="img-responsive">
+                <div class="overlay">
+                    <h2>FINANCIAL ADVISORY SERVICES</h2>
+                    
                 </div>
             </div>
         </div>
-    </header>
-    <!-- About Section -->
-    <section id="about">
-    <br>
-    <br>
-    <br>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h1><b>ABOUT US</b></h1>
-                    <br>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <ul class="timeline">
-                        <li>
-                            <div class="timeline-image">
-                                <img src="/assets/1.jpg", class="img-responsive img-thumbnail img-circle">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4 class="subheading">WHO WE ARE</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Economics Students’ Association (ESA – KNUST) is the legitimate student body of the Department of Economics at KNUST. </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <img src="/assets/2.jpg", class="img-responsive img-thumbnail img-circle">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4 class="subheading">MEMBERSHIP</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Membership includes all undergraduate and postgraduate students in the Department of Economics, as well as interested alumina that form the Technical Advisory Board of the Association.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-image">
-                                <img src="/assets/3.jpg", class="img-responsive img-thumbnail img-circle">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4 class="subheading">OUR VISION</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Our core aim is to bring up decisions that enhances holistic welfare of its members and to establish a community that will bring members together to network and help one another. </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <a href="https://apps.knust.edu.gh/students">
-                            <div class="timeline-image">
-                                <h4><b>CLICK TO
-                                    <br>STUDENT
-                                    <br>PORTAL</b></h4>
-                            </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+               
+    </div>
+  </div>
+</section>
+  <!-- /Section: services -->
+
+    <!-- Section: parallax 1 -->
+  <section id="parallax1" class="home-section parallax text-light" data-stellar-background-ratio="0.5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="text-center">
+            <h2 class="big-heading highlight-dark wow bounceInDown" data-wow-delay="0.2s">“WEBSITE MADE BY DAVID ADAFIA”</h2>
+          </div>
         </div>
-    </section> 
+      </div>
+    </div>
+  </section>
+  
+  <section id="works" class="home-section color-dark text-center bg-white">
+    <div class="container marginbot-50">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <div class="wow flipInY" data-wow-offset="0" data-wow-delay="0.4s">
+            <div class="section-heading text-center">
+              <h2 class="h-bold">PORTFOLIO</h2>
+              <div class="divider-header"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <div class="wow bounceInUp" data-wow-delay="0.4s">
+            <div id="owl-works" class="owl-carousel">
+              <div class="item"><a title="WENTRIM FOODS" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/1@2x.jpg"><img src="/assets/wentrim.jpg", class="img-responsive"></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  
+
+  <!-- Section: parallax 3 -->
+  <section id="parallax3" class="home-section parallax text-light text-center" data-stellar-background-ratio="0.5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="testimonialslide clearfix flexslider">
+            <ul class="slides">
+              <li>
+                <blockquote>
+                  CLICK TO STUDENT PORTAL.
+                </blockquote>
+                <h4><a href="https://apps.knust.edu.gh/students"></h4>
+              </li>
+              <li>
+                <blockquote>
+                  Since I joined the Jeppdavis team they have doubled my companies valutaion
+                </blockquote>
+                <h4>David Adafia <span>&#8213; HUNT </span></h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- google map -->
+  <div id="map-btn1-div">
+    <a id="map-btn1" class="gmap-btn close-map-button btn-show" href="#map">
+        Click here to view map
+        </a>
+  </div>
+  <a id="map-btn2" class="btn btn-blood btn-lg btn-noradius gmap-btn close-map-button btn-hide" href="#map" title="Close google map" data-toggle="tooltip" data-placement="top" style="color: black;">
+    esaknust17@gmail.com
+    </a>
+
+  <!-- google map -->
+  <section id="map" class="close-map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d15851.242524297906!2d-1.5671996642334007!3d6.67037227543615!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sgh!4v1522770563826" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+  </section>
+  <!-- /google map -->

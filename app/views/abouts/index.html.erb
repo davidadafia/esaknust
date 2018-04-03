@@ -1,257 +1,94 @@
-<br>
-<br>
-<br>
-<br>
-<br>
-<div class="container">
-    <div class="row" id="features">
-    	<h1 class="text-center"><b>EXECUTIVES</b></h1>
-    		<br>
-    		<br>
-                <div class="col-sm-4 feature">
-					<div class="panel">
-						<div class="panel-heading">
-							<h3 class="panel-title"> PRESIDENT </h3>
-						</div><!-- end panel-heading -->
-                                                <img src="/assets/esa2.jpg", class="img-responsive img-thumbnail img-circle">
-						<!--<div alt="Bootstrap 3" class="img-circle"><%= image_tag "SelormAdafia.png" %></div>-->
-						<h4>EMMANUEL HANSON</h4>
-                        <p class="text-muted">2017-2018</p>
-                        <ul class="list-inline">
-                            <li>
-                                <a href="https://www.facebook.com/profile.php?id=100004094871503" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
-                            </li>
-                            <li>
-                            <a href="#myModal3" role="button" class="btn-social btn-outline" data-toggle="modal"><i class="fa fa-fw fa-envelope"></i></a>
-                            </li>
-                            <li>
-                        </ul>						
-					</div><!-- end panel -->
-				</div><!-- end feature -->
-				<div class="col-sm-4 feature">
-					<div class="panel">
-						<div class="panel-heading">
-							<h3 class="panel-title"> VICE PRESIDENT </h3>
-						</div><!-- end panel-heading -->
-                                                <img src="/assets/esa6.jpg", class="img-responsive img-thumbnail img-circle">
-						<!--<div alt="Bootstrap 3" class="img-circle"><%= image_tag "SelormAdafia.png" %></div>-->
-						<h4>ODOI EDWIN NII ODOI JUNIOR</h4>
-                        <p class="text-muted">2017-2018</p>
-                        <ul class="list-inline">
-                            <li>
-                                <a href="https://www.facebook.com/wizkid.odoi" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
-                            </li>
-                            <li>
-                                <a href="#myModal4" role="button" class="btn-social btn-outline" data-toggle="modal"><i class="fa fa-fw fa-envelope"></i></a>
-                            </li>
-                        </ul>						
-					</div><!-- end panel -->
-				</div><!-- end feature -->
-				<div class="col-sm-4 feature">
-					<div class="panel">
-						<div class="panel-heading">
-							<h3 class="panel-title">GENERAL SECRETARY </h3>
-						</div><!-- end panel-heading -->
-                                                <img src="/assets/esa1.jpg", class="img-responsive img-thumbnail img-circle">
-						<!--<div alt="Bootstrap 3" class="img-circle"><%= image_tag "SelormAdafia.png" %></div>-->
-						<h4>Schaneil Awula Naa Dede Acquah</h4>
-                        <p class="text-muted">2017-2018</p>
-                        <ul class="list-inline">
-                            <li>
-                                <a href="https://www.facebook.com/schany.darlinggirl" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
-                            </li>
-                            <li>
-                                <a href="#myModal5" role="button" class="btn-social btn-outline" data-toggle="modal"><i class="fa fa-fw fa-envelope"></i></a>
-                            </li>
-                        </ul>						
-					</div><!-- end panel -->
-				</div><!-- end feature -->
-				
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="/homes/index">
+                     <span class="light">ESA KNUST</span>
+                </a>
+            </div>
 
-                 <div class="col-sm-4 feature">
-           
-                    <div class="panel">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">FINANCIAL SECRETARY</h3>
-                        </div><!-- end panel-heading -->
-                        <img src="/assets/esa3.jpg", class="img-responsive img-thumbnail img-circle">
-                        <h4>Ridout Quaicoe</h4>
-                        <p class="text-muted">2017-2018</p>
-                         <ul class="list-inline">
-                            <li>
-                                <a href="https://www.facebook.com/profile.php?id=100003916669537" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
-                            </li>
-                            <li>
-                                <a href="#myModal6" role="button" class="btn-social btn-outline" data-toggle="modal"><i class="fa fa-fw fa-envelope"></i></a>
-                            </li>
-                        </ul>
-                        
-                    </div><!-- end panel -->
-                </div><!-- end feature -->
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <%= link_to 'CLASSROOM',years_index_path %>
+                    </li>
+                    <li> <% if current_user %>
+                    <%= link_to 'LOGOUT', '/users/sign_out' %>
+                    <% else %></li>
+                    <li class="page-scroll">  <%= link_to 'LOGIN', '/users/sign_in' %></li>
+                    <li class="page-scroll"> <%= link_to 'SIGNUP', '/users/sign_up' %></li>
+                    <% end %> 
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
 
-                <div class="col-sm-4 feature">
-                    <div class="panel">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">WOMEN'S COMMISSIONER</h3>
-                        </div><!-- end panel-heading -->
-                        <img src="/assets/esa4.jpg", class="img-responsive img-thumbnail img-circle")%>
-                        
-                        <h4>Linda Nkrumah</h4>
-                        <p class="text-muted">2017-2018</p>
-                         <ul class="list-inline">
-                            <li>
-                                <a href="https://www.facebook.com/profile.php?id=100006270343713" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
-                            </li>
-                            <li>
-                                <a href="#myModal7" role="button" class="btn-social btn-outline" data-toggle="modal"><i class="fa fa-fw fa-envelope"></i></a>
-                            </li>
-                        </ul>
-                        
-                    </div><!-- end panel -->
-                </div><!-- end feature -->
-
-                 <div class="col-sm-4 feature">
-                    <div class="panel">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">ORGANISING SECETARY</h3>
-                        </div><!-- end panel-heading -->
-                        <img src="/assets/esa5.jpg", class="img-responsive img-thumbnail img-circle">                       
-                        <h4>Justice Kwakye Boateng</h4>
-                        <p class="text-muted">2017-2018</p>
-                         <ul class="list-inline">
-                             <li>
-                                <a href="https://www.facebook.com/kwakyejustice" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
-                            </li>
-                            <li>
-                                <a href="#myModal8" role="button" class="btn-social btn-outline" data-toggle="modal"><i class="fa fa-fw fa-envelope"></i></a>
-                            </li>
-                        </ul>
-                        
-                    </div><!-- end panel -->
-                </div><!-- end feature -->
-
-    </div>
 	<br>
     <br>
     <br>
-    <div class="container">
-    <div class="row">
-    <div class="col-sm-6 text-center">
-    <a href="#myModal" role="button" class="btn btn-default btn-lg" data-toggle="modal"><h4><b>ABOUT ESA</b></h4></a>
-    </div>
 
-    <div class="col-sm-6 text-center">
-    <a href="https://drive.google.com/file/d/0B8XtmtnPEbsmWlRLaVhGQWNYR0U/view?usp=sharing" role="button" class="btn btn-default btn-lg"><h4><b>ESA CONSTITUTION</b></h4></a>
-    </div>
-    </div>  
-    </div>
-    </div>                      
-                                <div class="modal fade" id="myModal">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button class="close" data-dismiss="modal">&times;</button>
+
+                         
+                               
                                                 
-                                               <b> <h4 class="modal-title text-center">ABOUT ESA</h4></b>
+                                               <b> <h4 class="text-center">ABOUT ESA</h4></b>
                                             </div><!-- end modal-header -->
-                                            <div class="modal-body text-left">
-                                                <P>
+                                            <div class="container">
+                                                <h6 class="text-center">
                                                     
                                                 Economics Students’ Association (ESA – KNUST) is the legitimate student body of the Department of Economics. Its membership includes all undergraduate students in the Department of Economics as well as interested postgraduate students and alumina that form the Technical Advisory Board of the Association. The Head of Department is the patron of the association. With our motto being “Brain behind Great Decisions”, the association is a non-profit one whose core aim is to bring up decisions that enhances holistic welfare of its members. We take decisions to:
                                                 <br>
+                                                <br>
                                                 1) Establish a network system that will bring members to each other and help one another.
+                                                <br>
                                                 <br>
                                                 2) Contribute meaningfully to the economic issues that go on in the country.
                                                 <br>
+                                                <br>
                                                 3) Create a more interactive condition between lecturers and students of the department. 
+                                                <br>
                                                 <br>
                                                 4) Foster relationship between the association and sister associations in Ghana, Africa and beyond.
                                                 <br>
+                                                <br>
                                                 5) Provide a uniform front for Economics students.
+                                                <br>
                                                 <br>
                                                 6) Help students know the demand of the corporate world and serve as a link between the corporate world and the student body.
                                                 <br>
+                                                <br>
                                                 7) Bring recognition to the association.
+                                                <br>
                                                 <br>
                                                 8) Help members understand the benefits of studying Economics and expose them to such strengths.
                                                 <br>
+                                                <br>
                                                 9) Expose members to available postgraduate and other professional courses. 
+                                                <br>
                                                 <br>
                                                 <div class="text-muted"><p> The Economics Students’ Association is undoubtedly one of the best student associations on campus KNUST and is adjudged the Best Department Association under the faculty of Social Sciences.</p>
                                                 </div>
-                                                </P>
+                                                </h6>
                                             </div><!-- end modal-body -->
                                             </div><!-- end modal-content -->
                                     </div><!-- end modal-dialog -->
                                 </div><!-- end myModal -->
                                 
                     
+    <div class="col-sm-12 text-center">
+    <a href="https://drive.google.com/file/d/0B8XtmtnPEbsmWlRLaVhGQWNYR0U/view?usp=sharing" role="button" class="btn btn-default btn-lg"><h4><b>ESA CONSTITUTION</b></h4></a>
+    </div>
                                 
-                                <div class="modal fade" id="myModal3">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button class="close" data-dismiss="modal">&times;</button>
-                                               <b> <p class="modal-title text-center">emmanuelhanson76@gmail.com</p></b>
-                                            </div><!-- end modal-header -->
-                                        </div><!-- end modal-content -->
-                                    </div><!-- end modal-dialog -->
-                                </div><!-- end myModal -->
-
-                                <div class="modal fade" id="myModal4">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button class="close" data-dismiss="modal">&times;</button>
-                                               <b> <p class="modal-title text-center">edwin.odoi12@gmail.com </p></b>
-                                            </div><!-- end modal-header -->
-                                        </div><!-- end modal-content -->
-                                    </div><!-- end modal-dialog -->
-                                </div><!-- end myModal -->
-
-                                <div class="modal fade" id="myModal5">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button class="close" data-dismiss="modal">&times;</button>
-                                               <b> <p class="modal-title text-center">schaneila77@gmail.com </p></b>
-                                            </div><!-- end modal-header -->
-                                        </div><!-- end modal-content -->
-                                    </div><!-- end modal-dialog -->
-                                </div><!-- end myModal -->
-
-                                <div class="modal fade" id="myModal6">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button class="close" data-dismiss="modal">&times;</button>
-                                               <b> <p class="modal-title text-center">ridoutquaicoe@gmail.com</p></b>
-                                            </div><!-- end modal-header -->
-                                        </div><!-- end modal-content -->
-                                    </div><!-- end modal-dialog -->
-                                </div><!-- end myModal -->
-
-                                <div class="modal fade" id="myModal7">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button class="close" data-dismiss="modal">&times;</button>
-                                               <b> <p class="modal-title text-center">yaalinda312@gmail.com</p></b>
-                                            </div><!-- end modal-header -->
-                                        </div><!-- end modal-content -->
-                                    </div><!-- end modal-dialog -->
-                                </div><!-- end myModal -->
-
-                                <div class="modal fade" id="myModal8">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button class="close" data-dismiss="modal">&times;</button>
-                                               <b> <p class="modal-title text-center">jboat1236@gmail.com </p></b>
-                                            </div><!-- end modal-header -->
-                                        </div><!-- end modal-content -->
-                                    </div><!-- end modal-dialog -->
-                                </div><!-- end myModal -->
+                               
                                              
 <br>
 <br>
