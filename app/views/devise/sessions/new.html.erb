@@ -1,3 +1,13 @@
+<style>
+body {
+    background: -webkit-linear-gradient(90deg, #FF512F 10%, #DD2476 90%);
+    background: -moz-linear-gradient(90deg, #FF512F 10%, #DD2476 90%);
+    background: -ms-linear-gradient(90deg, #FF512F 10%, #DD2476 90%);
+    background: -o-linear-gradient(90deg, #FF512F 10%, #DD2476 90%);
+    background: linear-gradient(90deg, #FF512F 10%, #DD2476 90%);
+    font-family: 'Open Sans', sans-serif!important;
+}
+</style>
 <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
@@ -5,7 +15,7 @@
                     Menu <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand" href="/homes/index">
-                     <span class="light">ESA KNUST</span>
+                     <span class="light" style="color: white;">ESA KNUST</span>
                 </a>
             </div>
 
@@ -15,9 +25,6 @@
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                     <li class="hidden">
                         <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <%= link_to 'CLASSROOM',years_index_path %>
                     </li>
                     <li> <% if current_user %>
                     <%= link_to 'LOGOUT', '/users/sign_out' %>
@@ -31,15 +38,15 @@
         </div>
         <!-- /.container -->
     </nav>
-<div class="headernew" style="background-color: #dff0f8">
+<div class="headernew">
 <div class="text-center">
-                    <div class="table">
+                    <div class="table col-md-8">
                     <br>
                     <br>
                     <br>
                     <br>
                     <br>
-                     <div><h2 class="text-center">Login</h2></div>
+                     <div><h1 class="text-center" style="color: white;">LOGIN</h1></div>
                     <ul>
                         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>     
                         <il> <div class="field">
@@ -71,7 +78,8 @@
                           
                             <% end %>
                         </il>
-                        <li>  
+                        <h3 style="color: white;">Not yet a member? Click Sign Up.</h3>
+                        <li style="color: white;">  
                             <%= render "devise/shared/links" %>
                         </li>
                     </ul>
