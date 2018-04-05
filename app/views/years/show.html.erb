@@ -1,3 +1,13 @@
+<style>
+body {
+    background: -webkit-linear-gradient(90deg, #FF762F 10%, #DD5576 90%);
+    background: -moz-linear-gradient(90deg, #FF762F 10%, #DD5576 90%);
+    background: -ms-linear-gradient(90deg, #FF762F 10%, #DD5576 90%);
+    background: -o-linear-gradient(90deg, #FF762F 10%, #DD5576 90%);
+    background: linear-gradient(90deg, #FF762F 10%, #DD5576 90%);
+    font-family: 'Open Sans', sans-serif!important;
+}
+</style>
 <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
@@ -5,7 +15,7 @@
                     Menu <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand" href="/homes/index">
-                     <span class="light">ESA KNUST</span>
+                     <span class="light" style="color: white;">ESA KNUST</span>
                 </a>
             </div>
 
@@ -15,9 +25,6 @@
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                     <li class="hidden">
                         <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <%= link_to 'CLASSROOM',years_index_path %>
                     </li>
                     <li> <% if current_user %>
                     <%= link_to 'LOGOUT', '/users/sign_out' %>
@@ -35,15 +42,14 @@
 <br>
 <br>
 <br>
-<br>
 <div class="row">
     <div class="container">         
         <div class="text-center">             
             <div class="col-sm-12 feature text-center">
                 <div class="text-center">
                 <div class="col-md-12 feature">
-                    <strong><h2><%= @year.title %></h2></strong>
-                    <div class="text-center">
+                    <strong><h2 class="col-md-12 wow fadeInDown feature" data-wow-duration="1000ms" data-wow-delay="500ms" style="color: white;"><%= @year.title %></h2></strong>
+                    <div  class="col-md-12 text-center wow fadeInDown feature" data-wow-duration="1000ms" data-wow-delay="700ms">
                     <% for classroom in @year.classrooms %>
                     
                     <h3><%= link_to classroom.title, classroom_path(classroom), :class => "btn btn-blood", :style => "color: black; "%></h3> 
@@ -57,7 +63,7 @@
 </div>
 <br>
 <div class="text-center">
-<%= link_to "Back", :back, :class => "btn btn-default btn-lg" %>
+<%= link_to "Back", :back, :class => "btn btn-primary btn-lg" %>
 </div>
 <br>
 <br>

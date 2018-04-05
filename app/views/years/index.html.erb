@@ -1,3 +1,13 @@
+<style>
+body {
+    background: -webkit-linear-gradient(90deg, #F03F39 10%, #DD5576 90%);
+    background: -moz-linear-gradient(90deg, #F03F39 10%, #DD5576 90%);
+    background: -ms-linear-gradient(90deg, #F03F39 10%, #91AE3A 90%);
+    background: -o-linear-gradient(90deg, #FF762F 10%, #91AE3A 90%);
+    background: linear-gradient(90deg, #FF762F 10%, #91AE3A 90%);
+    font-family: 'Open Sans', sans-serif!important;
+}
+</style>
 <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
@@ -5,7 +15,7 @@
                     Menu <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand" href="/homes/index">
-                     <span class="light">ESA KNUST</span>
+                     <span class="light" style="color: white;">ESA KNUST</span>
                 </a>
             </div>
 
@@ -15,9 +25,6 @@
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                     <li class="hidden">
                         <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <%= link_to 'CLASSROOM',years_index_path %>
                     </li>
                     <li> <% if current_user %>
                     <%= link_to 'LOGOUT', '/users/sign_out' %>
@@ -33,14 +40,16 @@
     </nav>
 <br>
 <br>
+<br>
+<br>
        <p class="notice text-center" style="background-color: #dff0d8;"><%= notice %></p>
        <p class="alert text-center"><%= alert %></p>
 <div class="row">
     <div class="container">
         <div class="text-center">                    
-        	<h2 class="text-center intro-text"><strong> SELECT YOUR YEAR</strong> </h2>
+        	<h1 class="text-center intro-text wow fadeInDown feature" data-wow-duration="1000ms" data-wow-delay="400ms"><strong style="color: white;"> SELECT YOUR YEAR</strong> </h1>
         	<div class="text-center ">       
-        		<div class="col-md-12 feature">
+        		<div class="col-md-12 wow fadeInDown feature" data-wow-duration="1000ms" data-wow-delay="700ms">
             		<% for year in @years %>
                 		<strong><h2><%= link_to year.title, year_path(year), :class => "btn btn-blood", :style => "color: black; " %></h2></strong>
             		<% end %>
