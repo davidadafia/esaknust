@@ -40,7 +40,7 @@ body {
     </nav>
 <div class="headernew">
 <div class="text-center">
-                    <div class="table col-md-8">
+                    <div class="table col-md-6">
                     <br>
                     <br>
                     <br>
@@ -51,7 +51,7 @@ body {
                         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>     
                         <il> <div class="field">
                              <%= f.label :email %><br>
-                             <%= f.email_field :email, autofocus: true %>
+                             <%= f.email_field :email, autofocus: true, :style =>"background-color: white;" %>
                              </div>
                         </il>
                         <br> 
@@ -71,8 +71,8 @@ body {
                             <% end -%>
                         </il>
                         <il>     
-                            <div class="actions">
-                            <%= f.submit'Log in' %>
+                            <div class="actions" style="color: black;">
+                            <%= f.submit'Log in', :class => "btn btn-info btn-lg" %>
                             </div> 
                             <br>
                           
