@@ -14,7 +14,7 @@
           <br>
           <div class="wow bounceInUp" data-wow-offset="0" data-wow-delay="1s">
             <div class="margintop-30">
-              <a href="#about" class="btn btn-blood" id="btn-scroll" style="color: black;">START HERE</a>
+              <a href="#courses" class="btn btn-blood" id="btn-scroll" style="color: black;">START HERE</a>
             </div>
           </div>
         </div>
@@ -52,10 +52,9 @@
               <div class="collapse navbar-collapse" id="menu">
                 <ul class="nav navbar-nav navbar-right">
                   <li class="active"><a href="#intro">Home</a></li>
-                  <li><%= link_to 'courses',years_index_path %></li>
-                  <li><a href="#service">portal</a></li>
-                  <li><a href="#works">Works</a></li>
-                  
+                  <li><a href="#courses">courses</a></li>
+                  <li><a href="#about">about</a></li>
+                  <li><a href="#executives">executives</a></li>
                   <li> <% if current_user %>
                     <%= link_to 'LOGOUT', '/users/sign_out' %>
                     <% else %></li>
@@ -73,6 +72,60 @@
     </nav>
   </div>
   <!-- /Navigation -->
+<!-- Courses -->
+  <section id="courses" class="home-section color-dark text-center bg-white">
+    <div class="container marginbot-50">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <div class="wow flipInY" data-wow-offset="0" data-wow-delay="0.4s">
+            <div class="section-heading text-center">
+              <h2 class="h-bold">COURSES</h2>
+              <div class="divider-header"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <div class="wow bounceInUp" data-wow-delay="0.4s">
+            <div id="owl-works" class="owl-carousel">
+              <h1 class="btn btn-info btn-lg">TIME TABLES</h1>
+              <h1 class="btn btn-danger btn-lg">PDFs</h1>
+              <h1 class="btn btn-warning btn-lg">PASSCO</h1>
+              <h1 class="btn btn-danger btn-lg">THESIS Egs</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="divider-header"></div>
+    <h2>To Enjoy This Experience...</h2>
+    <br>
+    <div class="container">
+      <div class="col-md-5 text-right"> <%= link_to 'LOGIN', '/users/sign_in', :class => "btn btn-primary btn-lg" %></div> 
+        <h1 class="col-md-2">OR</h1>
+      <div class="col-md-5 text-left"> <%= link_to 'SIGNUP', '/users/sign_up', :class => "btn btn-success btn-lg" %></div>
+    </div>
+  </section>
+<!-- /Courses -->
+
+<!-- Section: parallax 1 -->
+  <section id="parallax1" class="home-section parallax text-light" data-stellar-background-ratio="0.5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="text-center">
+            <h2 class="big-heading highlight-dark wow bounceInDown" data-wow-delay="0.2s">“BRAINS BEHIND GREAT DECISIONS”</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 <!-- Section: about -->
   <section id="about" class="home-section color-dark bg-white">
@@ -89,182 +142,107 @@
               <br>
               <p>Our core aim is to bring up decisions that enhances holistic welfare of its members and to establish a community that will bring members together to network and help one another. </p>
               <br>
-              <div class="text-center"><%= link_to 'LEARN MORE',abouts_index_path, :class => "btn btn-blood", :style => "color: black; "%></div>
+              <div class="text-center"><%= link_to 'LEARN MORE',abouts_index_path, :class => "btn btn-success btn-lg"%></div>
 
             </div>
           </div>
         </div>
       </div>
-
     </div> 
-    <br>
-    <br>
-    <div class="text-center">
-      <div class="container">
-
-
-        <div class="row">
-        <div class="text-center"><h2>EXECUTIVES</h2></div>
+      <!-- parallax  -->
+      <div id="parallax3" class="parallax text-light text-center marginbot50" data-stellar-background-ratio="0.5">
         <br>
-       
-          <div class="col-xs-6 col-sm-3 col-md-2">
-            <div class="team-wrapper-big wow bounceInUp" data-wow-delay="0.2s">
-              <div class="team-wrapper-overlay">
-                <h5></h5>
-                <p>EMMANUEL HANSON<br>
-                  PRESIDENT
-                </p>
-                
+          <br>
+        <div class="container">
+          <br>
+          <br>
+          <div class="row appear stats">
+            <div class="col-xs-6 col-sm-4 col-md-4">
+              <div class="align-center color-white txt-shadow">
+                <strong id="counter-coffee" class="number">933</strong><br />
+                <span class="text">Students</span>
               </div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-4">
+              <div class="align-center color-white txt-shadow">
+                <strong id="counter-music" class="number">11</strong><br />
+                <span class="text">Lectures</span>
+              </div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-4">
+              <div class="align-center color-white txt-shadow">
+                <strong id="counter-clock" class="number">30</strong><br />
+                <span class="text">Courses</span>
+              </div>
+            </div>
+          </div>
+          <br>
+          <br>
+        </div>
+        <br>
+          <br>
+      </div>
+  <br>
+  <br>
+
+    <div class="text-center">
+      <div id="executives" class="container">
+        <div class="row">
+        <div class="text-center"><h1 class="h-bold">EXECUTIVES</h1></div>
+        <br>
+        <div class="row">
+          <div class="col-sm-3">
+            <div class="team-wrapper-big wow bounceInUp" data-wow-delay="0.2s">
+              <div class="team-wrapper-overlay"><h5></h5><p>EMMANUEL HANSON<br>PRESIDENT</p></div>
               <img src="/assets/esa2.jpg", class="img-responsive img-thumbnail img-circle">
             </div>
           </div>
 
-          <div class="col-xs-6 col-sm-3 col-md-2">
+          <div class="col-sm-3">
             <div class="team-wrapper-big wow bounceInUp" data-wow-delay="0.4s">
-              <div class="team-wrapper-overlay">
-                <p>ODOI EDWIN JUNIOR<br>
-                VICE PRESIDENT</p>
-              </div>
+              <div class="team-wrapper-overlay"><p>ODOI EDWIN JUNIOR<br>VICE PRESIDENT</p></div>
               <img src="/assets/esa6.jpg", class="img-responsive img-thumbnail img-circle">
             </div>
           </div>
 
-          <div class="col-xs-6 col-sm-3 col-md-2">
+          <div class="col-sm-3">
             <div class="team-wrapper-big wow bounceInUp" data-wow-delay="0.6s">
-              <div class="team-wrapper-overlay">
-                <p>Ridout Quaicoe<br>
-                 FIANCIAL SECRETARY</p>
-              </div>
+              <div class="team-wrapper-overlay"><p>Ridout Quaicoe<br>FIANCIAL SECRETARY</p></div>
               <img src="/assets/esa3.jpg", class="img-responsive img-thumbnail img-circle">
             </div>
           </div>
 
-          <div class="col-xs-6 col-sm-3 col-md-2">
+          <div class="col-sm-3">
             <div class="team-wrapper-big wow bounceInUp" data-wow-delay="0.8s">
-              <div class="team-wrapper-overlay">
-                <p>Justice Boateng<br>
-                ORGANISING SECETARY</p>
-              </div>
+              <div class="team-wrapper-overlay"><p>Justice Boateng<br>ORGANISING SECETARY</p></div>
               <img src="/assets/esa5.jpg", class="img-responsive img-thumbnail img-circle">
             </div>
           </div>
-
-          <div class="col-xs-6 col-sm-3 col-md-2">
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+          <div class="pull-right">
             <div class="team-wrapper-big wow bounceInUp" data-wow-delay="1s">
-              <div class="team-wrapper-overlay">
-                <p>Schaneil Acquah<br>
-                GENERAL SECRETARY</p>
-              </div>
+              <div class="team-wrapper-overlay"><p>Schaneil Acquah<br>GENERAL SECRETARY</p></div>
               <img src="/assets/esa1.jpg", class="img-responsive img-thumbnail img-circle">
             </div>
           </div>
-
-          <div class="col-xs-6 col-sm-3 col-md-2">
+          </div>
+          
+          <div class="col-md-3">
+          <div class="pull-left">
             <div class="team-wrapper-big wow bounceInUp" data-wow-delay="1.2s">
-              <div class="team-wrapper-overlay">
-                <p>Linda Nkrumah<br>
-                WOMEN'S COMMISSIONER</p>
-              </div>
+              <div class="team-wrapper-overlay"><p>Linda Nkrumah<br>WOMEN'S COMMISSIONER</p></div>
               <img src="/assets/esa4.jpg", class="img-responsive img-thumbnail img-circle">
             </div>
           </div>
-
+          </div>
+        </div>
         </div>
       </div>
     </div>
   </section>
   <!-- /Section: about -->
-
-  <!-- Section: parallax 1 -->
-  <section id="parallax1" class="home-section parallax text-light" data-stellar-background-ratio="0.5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="text-center">
-            <h2 class="big-heading highlight-dark wow bounceInDown" data-wow-delay="0.2s">“BRAINS BEHIND GREAT DECISIONS”</h2>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section: services -->
-    <!-- Section: services -->
-  <section id="service" class="home-section color-dark bg-white"> 
-  <div class="container">
-    <div class="row text-center">
-    <div class="container marginbot-50">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-          <div class="wow flipInY" data-wow-offset="0" data-wow-delay="0.4s">
-            <div class="section-heading text-center">
-              <h2 class="h-bold">COURSES</h2>
-              <div class="divider-header"></div>
-              <h3>SIGN UP TO VIEW COURSES</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <!--
-        <div class="col-lg-12 col-sm-12">
-            <div class="hovereffect wow fadeInRight" data-wow-delay="0.4s">
-                <img src="/assets/bus.png", class="img-responsive">
-                <div class="overlay">
-                    <h2>FINANCIAL ADVISORY SERVICES</h2>
-                    
-                </div>
-            </div>
-        </div>
-              --> 
-    </div>
-  </div>
-</section>
-  <!-- /Section: services -->
-
-    <!-- Section: parallax 1 -->
-  <section id="parallax1" class="home-section parallax text-light" data-stellar-background-ratio="0.5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="text-center">
-            <h2 class="big-heading highlight-dark wow bounceInDown" data-wow-delay="0.2s">“ECONOMIC STUDENTS ASSOCIATION - KNUST”</h2>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <section id="works" class="home-section color-dark text-center bg-white">
-    <div class="container marginbot-50">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-          <div class="wow flipInY" data-wow-offset="0" data-wow-delay="0.4s">
-            <div class="section-heading text-center">
-              <h2 class="h-bold">ESAKNUST</h2>
-              <div class="divider-header"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-<!--
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-          <div class="wow bounceInUp" data-wow-delay="0.4s">
-            <div id="owl-works" class="owl-carousel">
-              <div class="item"><a title="WENTRIM FOODS" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/1@2x.jpg"><img src="/assets/wentrim.jpg", class="img-responsive"></a></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </section>-->
   
 
   <!-- Section: parallax 3 -->
@@ -298,13 +276,9 @@
         Click here to view map
         </a>
   </div>
-  <a id="map-btn2" class="btn btn-blood btn-lg btn-noradius gmap-btn close-map-button btn-hide" href="#map" title="Close google map" data-toggle="tooltip" data-placement="top" style="color: black;">
-    esaknust17@gmail.com
-    </a>
-
+  <a id="map-btn2" class="btn btn-blood btn-lg btn-noradius gmap-btn close-map-button btn-hide" href="#map" title="Close google map" data-toggle="tooltip" data-placement="top" style="color: black;">esaknust17@gmail.com</a>
   <!-- google map -->
   <section id="map" class="close-map">
     <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d15851.242524297906!2d-1.5671996642334007!3d6.67037227543615!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sgh!4v1522770563826" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
-
   </section>
   <!-- /google map -->
