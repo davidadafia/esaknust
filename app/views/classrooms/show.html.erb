@@ -42,7 +42,7 @@
 	<div class="row" id="features">
 		<div class="col-sm-3 text-center">
 			<br>
-			<h3 class="text-center"><%= link_to 'Edit', '/users/edit', {:style=>'text-decoration:none;'}%></h3>
+			<!--<h3 class="text-center"><%= link_to 'Edit', '/users/edit', {:style=>'text-decoration:none;'}%></h3>-->
 			    <% for outline in @classroom.outlines %>
 			    <strong><h2><%= link_to "Time Table", outline_path(outline), :class => "btn btn-danger btn-lg" %></h2></strong>
 				<% end %>
