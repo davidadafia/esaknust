@@ -1,55 +1,48 @@
-
 <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    Menu <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand" href="/homes/index">
-                     <span class="light" style="color: white;">ESA KNUST</span>
-                </a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li> <% if current_user %>
-                    <%= link_to 'LOGOUT', '/users/sign_out' %>
-                    <% else %></li>
-                    <li class="page-scroll">  <%= link_to 'LOGIN', '/users/sign_in' %></li>
-                    <li class="page-scroll"> <%= link_to 'SIGNUP', '/users/sign_up' %></li>
-                    <% end %> 
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-        <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-	<div class="container">
-		<div class="col-sm-12 text-center">
-				<h1><strong><%= @classroom.title %></strong></h1>
-		</div>
-		
-		<h2><strong>Welcome <%= current_user.user_name %></strong></h2>
-
-		
-		
-
-		<div class="row" id="features">
-			<div class="col-sm-3 text-center">
-			
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+        Menu<i class="fa fa-bars"></i>
+      </button>
+      <a class="navbar-brand" href="/homes/index">
+        <span class="light" style="color: white;">ESA KNUST</span>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+      <ul class="nav navbar-nav">
+        <li class="hidden">
+          <a href="#page-top"></a>
+        </li>
+        <li>
+          <% if current_user %>
+          <%= link_to 'LOGOUT', '/users/sign_out' %>
+            <% else %>
+        </li>
+        <li class="page-scroll">
+           <%= link_to 'LOGIN', '/users/sign_in' %>
+        </li>
+        <li class="page-scroll">
+           <%= link_to 'SIGNUP', '/users/sign_up' %>
+        </li>
+          <% end %> 
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container -->
+</nav>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+	<div class="col-sm-12 text-center">
+	    <h1><strong><%= @classroom.title %></strong></h1>
+	</div>	
+	<h2><strong>Welcome <%= current_user.user_name %></strong></h2>
+	<div class="row" id="features">
+		<div class="col-sm-3 text-center">
 			<br>
-				<h3 class="text-center">Settings <%= link_to '', '/users/edit', {:style=>'text-decoration:none; font-size:30px;', :class => "fa fa-gear fa-spin"}%> </h3>
+			<h3 class="text-center"><%= link_to 'Edit', '/users/edit', {:style=>'text-decoration:none;'%></h3>
 			    <% for outline in @classroom.outlines %>
 			    <strong><h2><%= link_to "Time Table", outline_path(outline), :class => "btn btn-danger btn-lg" %></h2></strong>
 				<% end %>
@@ -61,24 +54,17 @@
 				<% for question in @classroom.questions %>
 				<strong><h2><%= link_to "Questions", question_path(question), :class => "btn btn-warning btn-lg" %></h2></strong>
 				<% end %>
-				
-			</div>
-			<div class="col-sm-9">
-				<div class="container"><%= raw(@classroom.body) %> </div>
-			</div>
 		</div>
-		<br>
-		<br>
-		<div>
-			
-			<br>
-			<br><p class="text-center">Whatsapp, text or call 0242911291 in case of any issues or quesitons</p>
-		
+		<div class="col-sm-9">
+			<div class="container"><%= raw(@classroom.body) %></div>
 		</div>
+	</div>
+	<br>
+	<br>
 </div>
 
 <div class="text-center">
-<%= link_to "Back", :back, :class => "btn btn-default btn-lg" %>
+<%= link_to "Back", :back, :class => "btn btn-primary btn-lg" %>
 </div>
 <br>
 <br>
