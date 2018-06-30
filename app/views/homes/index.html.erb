@@ -1,17 +1,24 @@
   <!-- Section: home video -->
-  <section id="intro" class="home-video text-light">
-    <div class="home-video-wrapper">
-
-      <div class="homevideo-container">
-        <div id="P1" class="bg-player" style="display:block; margin: auto; background: rgba(0,0,0,0.5)" data-property="{videoURL:'https://www.youtube.com/watch?v=8R2-revQoAM',containment:'.homevideo-container', quality: '144p', showControls: false, autoPlay:true, mute:true, startAt:2, opacity:1, speed:0.5}"></div>
+  <section class="hero" id="intro">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-right navicon">
+          <a id="nav-toggle" class="nav_slide_button" href="#"><span></span></a>
+        </div>
       </div>
-      <div class="overlay">
-        <div class="text-center video-caption">
-          <div class="wow bounceInDown" data-wow-offset="0" data-wow-delay="0.8s">
-            <h1 class="big-heading font-light"><span id="js-rotating">ECONOMICS STUDENTS ASSOCIATION, BRAINS BEHIND GREAT DECISIONS, KWAME NKRUMAH UNIVERSITY OF SCIENCE AND TECHNOLOGY. </span></h1>
-          </div> 
-          <br>
-          <br>
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2 text-center inner">
+          <div class="animatedParent" style="color: red;" >
+            <h1 class="animated fadeInDown">Economic Students' Association </h1>
+            <br>
+            <h2 style="color: white;">Brains Behind Great Decisions</h2>
+            <br>
+            <p class="animated fadeInUp">Kwame Nkrumah University of Science & Technology</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3 text-center">
           <div class="wow bounceInUp" data-wow-offset="0" data-wow-delay="1s">
             <div class="margintop-30">
               <a href="#courses" class="btn btn-blood" id="btn-scroll" style="color: black;">START HERE</a>
@@ -188,7 +195,7 @@
     <h2>To Enjoy This Experience Click below.</h2>
     <br>
     <div class="container">
-      <%= link_to 'VIEW COURSES',years_index_path, :class => "btn btn-primary btn-lg", :style => "color: white;"%>
+      <%= link_to 'VIEW COURSES',years_index_path, :class => "btn btn-primary btn-lg", :style => "color: black;"%>
     </div>
   </section>
 </div>
