@@ -1,9 +1,8 @@
 class YearsController < ApplicationController
-	before_action :authenticate_user!
   def index
   	@classrooms = Classroom.all
   	@years = Year.all
-  end
+  end 
 
   def show
   	@years = Year.all

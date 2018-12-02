@@ -42,15 +42,16 @@ body {
 <br>
 <br>
 <br>
+
 <div class="row">
     <div class="container">         
         <div class="text-center">             
             <div class="col-sm-12 feature text-center">
                 <div class="text-center">
                 <div class="col-md-12 feature">
-                    <strong><h2 class="col-md-12 wow fadeInDown feature" data-wow-duration="1000ms" data-wow-delay="500ms" style="color: white;"><%= @year.title %></h2></strong>
+                    <strong><h2 class="col-md-12 wow fadeInDown feature" data-wow-duration="1000ms" data-wow-delay="500ms" style="color: white;">ALL COURSES</h2></strong>
                     <div  class="col-md-12 text-center wow fadeInDown feature" data-wow-duration="1000ms" data-wow-delay="700ms">
-                    <% for classroom in @year.classrooms %>
+                    <% for classroom in @classrooms %>
                     
                     <h3><%= link_to classroom.title, classroom_path(classroom), :class => "btn btn-blood", :style => "color: black; "%></h3> 
                     <% end %>

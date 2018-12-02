@@ -1,7 +1,8 @@
 class ClassroomsController < ApplicationController
-	 before_action :authenticate_user!
+    before_action :authenticate_user!
   def index
-    
+    @classrooms = Classroom.all
+    @years = Year.all
   end
 
   def show
@@ -13,8 +14,6 @@ class ClassroomsController < ApplicationController
     @resources =Resource.all
     @question = Question.find(params[:id])
     @questions =Question.all
-    @user = User.find(params[:id])
-    @users = User.all
     commontator_thread_show(@classroom)
   end
 

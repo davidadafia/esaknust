@@ -1,32 +1,15 @@
-  <!-- Section: home video -->
+    <!-- Section: home video -->
   <section class="hero" id="intro">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 text-right navicon">
-          <a id="nav-toggle" class="nav_slide_button" href="#"><span></span></a>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2 text-center inner">
-          <div class="animatedParent" style="color: red;" >
-            <h1 class="animated fadeInDown">Economic Students' Association </h1>
-            <br>
-            <h2 style="color: white;">Brains Behind Great Decisions</h2>
-            <br>
-            <p class="animated fadeInUp">Kwame Nkrumah University of Science & Technology</p>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3 text-center">
-          <div class="wow bounceInUp" data-wow-offset="0" data-wow-delay="1s">
-            <div class="margintop-30">
-              <a href="#courses" class="btn btn-blood" id="btn-scroll" style="color: black;">START HERE</a>
+      <div class="container">
+          <div class="animatedParent container">
+            <h1 class="animated fadeInDown col-md-12 h-bold">ECONOMIC STUDENTS' ASSOCIATION (KNUST) </h1>
+            <p class="animated fadeInUp h-bold col-md-12 pull-left">BRAINS BEHIND GREAT DECISIONS</p>
+              <br>
+              <div class="col-md-12 pull-left">
+              <a  href="#courses" class="btn btn-blood" id="btn-scroll">FIND COURSES</a>
             </div>
           </div>
-        </div>
       </div>
-    </div>
   </section>
   <!-- /Section: intro -->
 
@@ -52,8 +35,8 @@
               <!-- Brand and toggle get grouped for better mobile display -->
               <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
-                                                <i class="fa fa-bars"></i>
-                                                </button>
+                  <i class="fa fa-bars"></i>
+                </button>
               </div>
               <!-- Collect the nav links, forms, and other content for toggling -->
               <div class="collapse navbar-collapse" id="menu">
@@ -61,7 +44,6 @@
                   <li class="active"><a href="#intro">Home</a></li>
                   <li><a href="#courses">courses</a></li>
                   <li><a href="#about">about</a></li>
-                  <li><a href="#executives">executives</a></li>
                   <li> <% if current_user %>
                     <%= link_to 'LOGOUT', '/users/sign_out' %>
                     <% else %></li>
@@ -81,121 +63,96 @@
   <!-- /Navigation -->
 <!-- Courses -->
 <div class="courses">
-  <section id="courses" class="courses home-section color-dark text-center bg-white">
-    <div class="container marginbot-50">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
+  <section id="courses" class="courses home-section color-dark bg-white">
+      <div style="background-color: #def3c8" >
+        <div class="container" id="posty">
+        <div class="col-md-6">
+        <h4 class="text-center muted">Looking for something to study?</h4>
+        </div>
+        <div class="col-md-6">
+            <div id="custom-search-input">
+                <div class="input-group col-md-12">
+                    <input type="text" class="form-control input-lg" placeholder="Search" />
+                    <span class="input-group-btn">
+                        <button class="btn btn-info btn-lg" type="button">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+      </div>
+      </div>
+      <br>
+      <div class="container">
+        <div class="col-md-12">
           <div class="wow flipInY" data-wow-offset="0" data-wow-delay="0.4s">
-            <div class="section-heading text-center">
-              <h2 class="h-bold">COURSES</h2>
-              <div class="divider-header"></div>
+            <div class="section-heading">
+              <h2 class="h-bold">POPULAR COURSES</h2>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
     <div class="container">
       <div class="row">
-        <div >
-          <div>
-            <div>
-
-          <div class="col-md-3">
+        <div>
+          <div class="col-md-4">
             <div class="animated rotateInDownLeft slower">
-              <div class="service-box" style="background: -webkit-linear-gradient(90deg, #FF762F 10%, #DD5576 90%);
-    background: -moz-linear-gradient(90deg, #FF762F 10%, #DD5576 90%);
-    background: -ms-linear-gradient(90deg, #FF762F 10%, #DD5576 90%);
-    background: -o-linear-gradient(90deg, #FF762F 10%, #DD5576 90%);
-    background: linear-gradient(90deg, #FF762F 10%, #DD5576 90%);
-    font-family: 'Open Sans', sans-serif!important;">
-                
-                <div class="service-desc">
-                  <strong><h5 style="color: white;">Time Table</h5></strong>
-                  <div class="divider-header"></div>
-                  <div>
-                    <p>
-                    Time tables for lectuers and exams.
-                  </p>
-                  </div>
-                </div>
-              </div>
+              <a  href="#courses" class="btn btn-blood" id="btn-scroll" style="color: #007db8">ECONOMETRICS</a>
+              <li class="page-scroll"> <%= link_to 'SIGNUP', '/users/sign_up' %></li>
             </div>
           </div>
+          <div class="col-md-12 wow fadeInDown feature" data-wow-duration="1000ms" data-wow-delay="700ms">
+                <% for year in @years %>
+                    <strong><h2><%= link_to year.title, year_path(year), :class => "btn btn-blood", :style => "color: black; " %></h2></strong>
+                <% end %>
+            </div><!-- end feature -->
 
-          <div class="col-md-3">
+          <div class="col-md-4">
             <div class="animated rotateInDownLeft slower">
-              <div class="service-box" style="background: -webkit-linear-gradient(90deg, #F03F39 10%, #DD5576 90%);
-    background: -moz-linear-gradient(90deg, #F03F39 10%, #DD5576 90%);
-    background: -ms-linear-gradient(90deg, #F03F39 10%, #91AE3A 90%);
-    background: -o-linear-gradient(90deg, #FF762F 10%, #91AE3A 90%);
-    background: linear-gradient(90deg, #FF762F 10%, #91AE3A 90%);
-    font-family: 'Open Sans', sans-serif!important;">
-                
-                <div class="service-desc">
-                  <strong><h5 style="color: white;">PDFs</h5></strong>
-                  <div class="divider-header"></div>
-                  <p>
-                    Access to PDFs and Handouts.
-                  </p>
-                </div>
-              </div>
+              <a  href="#courses" class="btn btn-blood" id="btn-scroll" style="color: #007db8">ECONOMY OF GHANA</a>
+              <li class="page-scroll"> <%= link_to 'SIGNUP', '/users/sign_up' %></li>
             </div>
           </div>
+          
 
-          <div class="col-md-3">
+          <div class="col-md-4">
             <div class="animated rotateInDownLeft slower">
-              <div class="service-box" style="background: -webkit-linear-gradient(90deg, #FF762F 10%, #DD5576 90%);
-    background: -moz-linear-gradient(90deg, #FF762F 10%, #DD5576 90%);
-    background: -ms-linear-gradient(90deg, #FF762F 10%, #DD5576 90%);
-    background: -o-linear-gradient(90deg, #FF762F 10%, #DD5576 90%);
-    background: linear-gradient(90deg, #FF762F 10%, #DD5576 90%);
-    font-family: 'Open Sans', sans-serif!important;">
-                
-                <div class="service-desc">
-                  <strong><h5 style="color: white;">Past Questions</h5></strong>
-                  <div class="divider-header"></div>
-                  <p>
-                    Try questions to prep you for exams
-                  </p>
-                </div>
-              </div>
+              <a  href="#courses" class="btn btn-blood" id="btn-scroll" style="color: #007db8">LABOUR ECONOMICS</a>
+              <li class="page-scroll"> <%= link_to 'SIGNUP', '/users/sign_up' %></li>
             </div>
-          </div>
+          </div>              
+        </div>
+      </div>
 
-          <div class="col-md-3">
+      <div class="row">
+        <div>
+          <div class="col-md-4">
             <div class="animated rotateInDownLeft slower">
-              <div class="service-box" style="background: -webkit-linear-gradient(90deg, #F03F39 10%, #DD5576 90%);
-    background: -moz-linear-gradient(90deg, #F03F39 10%, #DD5576 90%);
-    background: -ms-linear-gradient(90deg, #F03F39 10%, #91AE3A 90%);
-    background: -o-linear-gradient(90deg, #FF762F 10%, #91AE3A 90%);
-    background: linear-gradient(90deg, #FF762F 10%, #91AE3A 90%);
-    font-family: 'Open Sans', sans-serif!important;">
-                
-                <div class="service-desc">
-                  <strong><h5 style="color: white;">Project Work</h5></strong>
-                  <div class="divider-header"></div>
-                  <p>
-                    Get access to examples of final year projects.
-                  </p>
-                </div>
-              </div>
+              <a  href="#courses" class="btn btn-blood" id="btn-scroll" style="color: #007db8">Micro Economics</a>
+              <li class="page-scroll"> <%= link_to 'SIGNUP', '/users/sign_up' %></li>
             </div>
           </div>
 
-             
+          <div class="col-md-4">
+            <div class="animated rotateInDownLeft slower">
+              <a  href="#courses" class="btn btn-blood" id="btn-scroll" style="color: #007db8">Monetary Economics</a>
+              <li class="page-scroll"> <%= link_to 'SIGNUP', '/users/sign_up' %></li>
             </div>
           </div>
+
+          <div class="col-md-4">
+            <div class="animated rotateInDownLeft slower">
+              <a  href="#courses" class="btn btn-blood" id="btn-scroll" style="color: #007db8">Financial Economics</a><li class="page-scroll"> <%= link_to 'SIGNUP', '/users/sign_up' %></li>
+            </div>
+          </div>              
         </div>
       </div>
     </div>
     <br>
-    <br>
-    <div class="divider-header"></div>
-    <h2>To Enjoy This Experience Click below.</h2>
-    <br>
-    <div class="container">
-      <%= link_to 'VIEW COURSES',years_index_path, :class => "btn btn-primary btn-lg", :style => "color: black;"%>
+    <div class="container text-center">
+      <%= link_to 'VIEW ALL COURSES',years_index_path, :class => "btn btn-blood btn-lg", :style => "color: black;"%>
     </div>
   </section>
 </div>
@@ -213,126 +170,39 @@
       </div>
     </div>
   </section>
+<br>
+<br>
 
-<!-- Section: about -->
-  <section id="about" class="home-section color-dark bg-white">
-    <div class="container marginbot-50">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-          <div class="wow flipInY" data-wow-offset="0" data-wow-delay="0.4s">
-            <div class="section-heading text-center">
-              <h2 class="h-bold">About</h2>
-              <div class="divider-header"></div>
-              <p>Economics Students’ Association (ESA – KNUST) is the legitimate student body of the Department of Economics. </p>
-              <br>
-              <p>Its membership includes all undergraduate students in the Department of Economics as well as interested postgraduate students and alumina that form the Technical Advisory Board of the Association.</p>
-              <br>
-              <p>Our core aim is to bring up decisions that enhances holistic welfare of its members and to establish a community that will bring members together to network and help one another. </p>
-              <br>
-              <div class="text-center"><%= link_to 'LEARN MORE',abouts_index_path, :class => "btn btn-success btn-lg"%></div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> 
-      <!-- parallax  -->
-      <div id="parallax3" class="parallax text-light text-center marginbot50" data-stellar-background-ratio="0.5">
-        <br>
-          <br>
-        <div class="container">
-          <br>
-          <br>
-          <div class="row appear stats">
-            <div class="col-xs-6 col-sm-4 col-md-4">
-              <div class="align-center color-white txt-shadow">
-                <strong id="counter-coffee" class="number">933</strong><br />
-                <span class="text">Students</span>
-              </div>
-            </div>
-            <div class="col-xs-6 col-sm-4 col-md-4">
-              <div class="align-center color-white txt-shadow">
-                <strong id="counter-music" class="number">11</strong><br />
-                <span class="text">Lectures</span>
-              </div>
-            </div>
-            <div class="col-xs-6 col-sm-4 col-md-4">
-              <div class="align-center color-white txt-shadow">
-                <strong id="counter-clock" class="number">47</strong><br />
-                <span class="text">Courses</span>
-              </div>
-            </div>
-          </div>
-          <br>
-          <br>
-        </div>
-        <br>
-          <br>
-      </div>
-  <br>
-  <br>
-
-    <div class="text-center">
-      <div id="executives" class="container">
-        <div class="row">
-        <div class="text-center"><h1 class="h-bold">EXECUTIVES</h1></div>
-        <br>
-        <div class="row">
-          <div class="col-sm-3">
-            <div class="team-wrapper-big wow bounceInUp" data-wow-delay="0.2s">
-              <div class="team-wrapper-overlay"><h5></h5><p>EMMANUEL HANSON<br>PRESIDENT</p></div>
-              <img src="/assets/esa2.jpg", class="img-responsive img-thumbnail img-circle">
-            </div>
-          </div>
-
-          <div class="col-sm-3">
-            <div class="team-wrapper-big wow bounceInUp" data-wow-delay="0.4s">
-              <div class="team-wrapper-overlay"><p>ODOI EDWIN JUNIOR<br>VICE PRESIDENT</p></div>
-              <img src="/assets/esa6.jpg", class="img-responsive img-thumbnail img-circle">
-            </div>
-          </div>
-
-          <div class="col-sm-3">
-            <div class="team-wrapper-big wow bounceInUp" data-wow-delay="0.6s">
-              <div class="team-wrapper-overlay"><p>Ridout Quaicoe<br>FIANCIAL SECRETARY</p></div>
-              <img src="/assets/esa3.jpg", class="img-responsive img-thumbnail img-circle">
-            </div>
-          </div>
-
-          <div class="col-sm-3">
-            <div class="team-wrapper-big wow bounceInUp" data-wow-delay="0.8s">
-              <div class="team-wrapper-overlay"><p>Justice Boateng<br>ORGANISING SECETARY</p></div>
-              <img src="/assets/esa5.jpg", class="img-responsive img-thumbnail img-circle">
-            </div>
-          </div>
-        </div>
-        <br>
-        <br>
-        <div class="row">
-          <div class="col-md-6">
-          <div class="pull-right">
-            <div class=" col-md-5 team-wrapper-big wow bounceInUp" data-wow-delay="1s">
-              <div class="team-wrapper-overlay"><p>Schaneil Acquah<br>GENERAL SECRETARY</p></div>
-              <img src="/assets/esa1.jpg", class="img-responsive img-thumbnail img-circle">
-            </div>
-          </div>
-          </div>
-          
-          <div class="col-md-6">
-          <div class="pull-left">
-            <div class="col-md-5 team-wrapper-big wow bounceInUp" data-wow-delay="1.2s">
-              <div class="team-wrapper-overlay"><p>Linda Nkrumah<br>WOMEN'S COMMISSIONER</p></div>
-              <img src="/assets/esa4.jpg", class="img-responsive img-thumbnail img-circle">
-            </div>
-          </div>
-          </div>
-        </div>
-        </div>
-      </div>
+<section>
+ <div class="container">
+ <div class="row">
+  <div class="col-md-4" id="about">
+    <div class="wow bounceInUp text-center" data-wow-delay="0.2s">
+        <img src="/assets/esalogo.jpg", class="img-responsive img-thumbnail img-circle">
+        <div class="text-center"><%= link_to 'ABOUT ESA',abouts_index_path, :class => "btn btn-success btn-lg"%></div>
     </div>
-  </section>
-  <!-- /Section: about -->
-  
+  </div>
+
+  <div class="col-md-4">
+    <div class="wow bounceInUp text-center" data-wow-delay="0.2s">
+        <img src="/assets/esa2.jpg", class="img-responsive img-thumbnail img-circle">
+        <div  class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">EXECUTIVES</div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="wow bounceInUp text-center" data-wow-delay="0.2s">
+        <img src="/assets/yes.png", class="img-responsive img-thumbnail img-circle">
+        <div class="btn btn-success btn-lg"><a href="https://apps.knust.edu.gh/">KNUST PORTAL</a></div>
+    </div>
+  </div>
+ </div>
+ </div>
+</section>
+<br>
+<br>
+
+
 
   <!-- Section: parallax 3 -->
   <section id="parallax3" class="home-section parallax text-light text-center" data-stellar-background-ratio="0.5">
@@ -341,17 +211,11 @@
         <div class="col-md-12">
           <div class="testimonialslide clearfix flexslider">
             <ul class="slides">
-              <li>
+              <li class=" highlight-dark">
                 <blockquote>
-                  Website made by David Adafia
+                  Website made by
                 </blockquote>
-                <h4>davidadafia@gmail.com <span>&#8213; 0242911291 </span></h4>
-              </li>
-              <li>
-                <blockquote>
-                  Economics is a science which studies human behaviour as a relationship between ends and scarce means which have alternative uses.
-                </blockquote>
-                <h4> LIONEL ROBINS <span>&#8213; ECONOMIST </span></h4>
+                <h4>CHAIRMAN WEB SOLUTIONS</h4>
               </li>
             </ul>
           </div>
@@ -371,3 +235,70 @@
     <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d15851.242524297906!2d-1.5671996642334007!3d6.67037227543615!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sgh!4v1522770563826" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
   </section>
   <!-- /google map -->
+
+
+
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">EXECUTIVES</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="team-wrapper-big wow bounceInUp" data-wow-delay="0.2s">
+              <div class="team-wrapper-overlay"><h5></h5><p>EMMANUEL HANSON<br>PRESIDENT</p></div>
+              <img src="/assets/esa2.jpg", class="img-responsive img-thumbnail img-circle">
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <div class="team-wrapper-big wow bounceInUp" data-wow-delay="0.4s">
+              <div class="team-wrapper-overlay"><p>ODOI EDWIN JUNIOR<br>VICE PRESIDENT</p></div>
+              <img src="/assets/esa6.jpg", class="img-responsive img-thumbnail img-circle">
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <div class="team-wrapper-big wow bounceInUp" data-wow-delay="0.6s">
+              <div class="team-wrapper-overlay"><p>Ridout Quaicoe<br>FIANCIAL SECRETARY</p></div>
+              <img src="/assets/esa3.jpg", class="img-responsive img-thumbnail img-circle">
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="team-wrapper-big wow bounceInUp" data-wow-delay="0.8s">
+              <div class="team-wrapper-overlay"><p>Justice Boateng<br>ORGANISING SECETARY</p></div>
+              <img src="/assets/esa5.jpg", class="img-responsive img-thumbnail img-circle">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="team-wrapper-big wow bounceInUp" data-wow-delay="1s">
+              <div class="team-wrapper-overlay"><p>Schaneil Acquah<br>GENERAL SECRETARY</p></div>
+              <img src="/assets/esa1.jpg", class="img-responsive img-thumbnail img-circle">
+            </div>
+          </div>
+          
+          <div class="col-md-4">
+            <div class="team-wrapper-big wow bounceInUp" data-wow-delay="1.2s">
+              <div class="team-wrapper-overlay"><p>Linda Nkrumah<br>WOMEN'S COMMISSIONER</p></div>
+              <img src="/assets/esa4.jpg", class="img-responsive img-thumbnail img-circle">
+            </div>
+          </div>
+        </div>      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
