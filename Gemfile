@@ -16,6 +16,7 @@ gem 'devise'
 gem 'cancan' # or cancancan
 gem 'draper'
 gem 'pundit'
+gem 'railties', '~> 5.0', '>= 5.0.0.1'
 
 gem 'simple_form'
 # gem 'paperclip', '~> 5.0'
