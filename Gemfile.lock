@@ -252,8 +252,8 @@ DEPENDENCIES
   acts_as_votable
   byebug
   cancan
-  coffee-rails (~> 4.1.0)
-  commontator (~> 4.11.1)
+  coffee-rails
+  commontator
   devise
   draper
   font-awesome-rails
@@ -261,10 +261,9 @@ DEPENDENCIES
   jquery-rails
   pg (~> 0.20)
   pundit
-  rails (= 4.2.6)
+  rails
   rails_12factor
-  railties
-  sass-rails (~> 5.0)
+  sass-rails
   sdoc (~> 0.4.0)
   simple_form
   turbolinks
