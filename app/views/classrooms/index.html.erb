@@ -10,5 +10,29 @@
 			    <strong><h2>
 			    	<%= link_to classroom.title, classroom_path(classroom), :class => "btn btn-blood", :style => "color: black; " %>
 			    </h2></strong>
-				<% end %>
+				
 </div>
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-10">
+            <div class="panel panel-primary">
+                <div class="row">
+                    <ul class="col-md-4">
+                        <li class="list-group-item">
+                            <div>
+                                <label>
+                                   <%= link_to classroom.title, classroom_path(classroom)%>
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% end %>
