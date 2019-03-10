@@ -2027,3 +2027,19 @@ a.btn:focus{
 .btn:hover {
   background-color: #ddd;
 }
+
+
+.goldfish{
+  margin: auto;
+  width: 80%;
+  border: 3px;
+  padding: 10px;
+}
+
+.goldfish2{
+  text-align: center;
+  margin: auto;
+  width: 50%;
+  border: 1px;
+  padding: 50px;
+}

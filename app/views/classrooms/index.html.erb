@@ -7,13 +7,13 @@
 		<h2><strong>welcome <%= current_user.user_name %></strong></h2>
 
      <% for classroom in @classrooms %>
-</div>
-<div class="container">
+
+<div class="goldfish container">
     <div class="row">
-        <div class="col-md-10">
+        <div class="col-md-12">
             <div class="panel panel-primary">
                 <div class="row">
-                    <ul class="col-md-4">
+                    <ul>
                         <li class="list-group-item">
                             <div>
                                 <label>
@@ -29,3 +29,4 @@
 </div>
 
 <% end %>
+</div>
