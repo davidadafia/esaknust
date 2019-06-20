@@ -4,8 +4,8 @@
   <section class="hero" id="intro">
       <div class="container">
           <div class="animatedParent container">
-            <h1 class="animated fadeInDown col-md-12 h-bold">PASCOLOGY PRESENTS <br> ECONOMIC STUDENTS' ASSOCIATION (KNUST) </h1>
-            <p class="animated fadeInUp h-bold col-md-12 pull-left">BRAINS BEHIND GREAT DECISIONS</p>
+            <h1 class="animated fadeInDown col-md-12 h-bold">PASCOLOGY <br> We study with you.</h1>
+            <!--<p class="animated fadeInUp h-bold col-md-12 pull-left">BRAINS BEHIND GREAT DECISIONS</p>-->
               <br>
               <div class="col-md-12 pull-left">
               <a  href="#courses" class="btn btn-blood" id="btn-scroll">FIND COURSES</a>
@@ -45,7 +45,7 @@
                 <ul class="nav navbar-nav navbar-right">
                   <li class="active"><a href="#intro">Home</a></li>
                   <li><a href="#courses">courses</a></li>
-                  <li><a href="#about">about</a></li>
+                  <!--<li><a href="#about">about</a></li>-->
                   <li> <% if current_user %>
                     <%= link_to 'LOGOUT', '/users/sign_out' %>
                     <% else %></li>
@@ -80,14 +80,13 @@
    
     <br>
     <div class="container text-center">
-      <%= link_to 'VIEW ALL COURSES',classrooms_index_path, :class => "btn btn-blood btn-lg", :style => "color: black;"%>
+      <%= link_to 'VIEW ALL COURSES',classrooms_index_path, :class => "btn btn-info btn-lg"%>
     </div>
   </section>
 </div>
 <!-- /Courses -->
 
-<!-- Section: parallax 1 -->
-  <section id="parallax1" class="home-section parallax text-light" data-stellar-background-ratio="0.5">
+<!-- Section: parallax 1   <section id="parallax1" class="home-section parallax text-light" data-stellar-background-ratio="0.5">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -104,33 +103,20 @@
 <section>
  <div class="container">
  <div class="row">
-  <div class="col-md-4" id="about">
-    <div class="wow bounceInUp text-center" data-wow-delay="0.2s">
-        <img src="/assets/esalogo.jpg", class="img-responsive img-thumbnail img-circle">
-        <div class="text-center"><%= link_to 'ABOUT ESA',abouts_index_path, :class => "btn btn-success btn-lg"%></div>
-    </div>
-  </div>
 
   <div class="col-md-4">
     <div class="wow bounceInUp text-center" data-wow-delay="0.2s">
         <img src="/assets/esa2.jpg", class="img-responsive img-thumbnail img-circle">
-        <div  class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">EXECUTIVES</div>
+        <div  class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">ABOUT US</div>
     </div>
   </div>
 
-  <div class="col-md-4">
-    <div class="wow bounceInUp text-center" data-wow-delay="0.2s">
-        <img src="/assets/yes.png", class="img-responsive img-thumbnail img-circle">
-        <div class="btn btn-success btn-lg"><a href="https://apps.knust.edu.gh/">KNUST PORTAL</a></div>
-    </div>
-  </div>
  </div>
  </div>
 </section>
 <br>
 <br>
-
-
+-->
 
   <!-- Section: parallax 3 -->
   <section id="parallax3" class="home-section parallax text-light text-center" data-stellar-background-ratio="0.5">
@@ -141,9 +127,9 @@
             <ul class="slides">
               <li class=" highlight-dark">
                 <blockquote>
-                  Website made by
+                  (+233)24 291 1291
                 </blockquote>
-                <h4>CHAIRMAN WEB SOLUTIONS</h4>
+                <h4>David Adafia</h4>
               </li>
             </ul>
           </div>
@@ -157,7 +143,7 @@
         Click here to view map
         </a>
   </div>
-  <a id="map-btn2" class="btn btn-blood btn-lg btn-noradius gmap-btn close-map-button btn-hide" href="#map" title="Close google map" data-toggle="tooltip" data-placement="top" style="color: black;">esaknust17@gmail.com</a>
+  <a id="map-btn2" class="btn btn-blood btn-lg btn-noradius gmap-btn close-map-button btn-hide" href="#map" title="Close google map" data-toggle="tooltip" data-placement="top" style="color: black;">davidadafia@gmail.com</a>
   <!-- google map -->
   <section id="map" class="close-map">
     <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d15851.242524297906!2d-1.5671996642334007!3d6.67037227543615!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sgh!4v1522770563826" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
