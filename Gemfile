@@ -5,7 +5,7 @@ source 'http://rubygems.org'
 gem 'rails'
 gem 'rails_12factor'
 # Use sqlite3 as the database for Active Record
-gem 'pg', '~> 0.20'
+gem 'pg'
 gem 'activeadmin', '~> 2.1.0'
 gem 'remotely', '~> 0.3.0'
 gem 'commontator', '~> 4.11.1'
@@ -21,7 +21,6 @@ gem 'pundit'
 gem 'simple_form'
 # gem 'paperclip', '~> 5.0'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
 gem "font-awesome-rails"
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
