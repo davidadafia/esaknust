@@ -6,7 +6,7 @@ gem 'rails'
 gem 'rails_12factor'
 # Use sqlite3 as the database for Active Record
 gem 'pg'
-gem 'activeadmin', '~> 2.1.0'
+gem 'activeadmin'
 gem 'remotely', '~> 0.3.0'
 gem 'commontator', '~> 4.11.1'
 gem 'acts_as_votable'
