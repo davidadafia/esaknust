@@ -9,7 +9,7 @@ gem 'pg'
 gem 'remotely', '~> 0.3.0'
 gem 'commontator', '~> 4.11.1'
 gem 'acts_as_votable'
-gem 'activeadmin'
+gem 'activeadmin', '~> 2.1.0'
 # Plus integrations with:
 gem 'devise'
 gem 'cancan' # or cancancan
