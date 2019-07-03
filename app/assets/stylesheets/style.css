@@ -232,6 +232,7 @@ a:focus {
   .hero a {
     font-size: 20px;
     background-color: transparent;
+    text-decoration-color: white;
     text-decoration: none;
     border-color: white;
   }
@@ -267,6 +268,7 @@ a:focus {
   .hero a {
     font-size: 20px;
     background-color: transparent;
+    text-decoration-color: white;
     text-decoration: none;
     border-color: white;
   }
@@ -289,6 +291,7 @@ a:focus {
   }
 
   .section-heading a {
+    text-decoration-color: white;
     text-decoration: none;
     font-size: 20px;
     background-color: #161536;
@@ -307,9 +310,11 @@ a:focus {
 
   .section-heading a {
     text-decoration-color: white;
+    text-decoration: none;
     font-size: 20px;
-    background-color: #9090d7;
+    background-color: #161536;
     margin-bottom: 10px;
+    border-color: white;
   }
 }
 
