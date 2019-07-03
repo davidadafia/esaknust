@@ -71,7 +71,6 @@ a {
 
 a:hover,
 a:focus {
-    text-decoration: none;
     text-decoration-line: none;
 }
 
@@ -81,7 +80,7 @@ a:focus {
 --- The Navigation
 ============================ */
 #navigation {
-	background: #545551;
+	background: white;
 	z-index: 9999;
 	width:100%;
   box-sizing:border-box;
@@ -236,6 +235,13 @@ a:focus {
     text-decoration: none;
     border-color: white;
   }
+
+  .hero a:hover,
+  .hero a:focus {
+    background-color: #7a9cb7; 
+    text-decoration-color: black;
+    text-decoration-line: none;
+}
 }
 
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
@@ -272,6 +278,13 @@ a:focus {
     text-decoration: none;
     border-color: white;
   }
+
+  .hero a:hover,
+  .hero a:focus {
+    background-color: #7a9cb7; 
+    text-decoration-color: black;
+    text-decoration-line: none;
+}
 }
 
 /* ===========================
@@ -294,10 +307,17 @@ a:focus {
     text-decoration-color: white;
     text-decoration: none;
     font-size: 20px;
-    background-color: #161536;
+    background-color: transparent;
     margin-bottom: 30px;
-    border-color: white;
+    border-color: black;
   }
+
+  .section-heading a:hover,
+  .section-heading a:focus {
+    background-color: #7a9cb7; 
+    text-decoration-color: black;
+    text-decoration-line: none;
+}
 }
 
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
@@ -309,13 +329,20 @@ a:focus {
   }
 
   .section-heading a {
-    text-decoration-color: white;
+    text-decoration-color: black;
     text-decoration: none;
     font-size: 20px;
-    background-color: #161536;
+    background-color: transparent;
     margin-bottom: 10px;
-    border-color: white;
+    border-color: black;
   }
+
+  .section-heading a:hover,
+  .section-heading a:focus {
+    background-color: #7a9cb7; 
+    text-decoration-color: black;
+    text-decoration-line: none;
+}
 }
 
 /* ===========================
