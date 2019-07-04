@@ -210,7 +210,7 @@ a:focus {
     -o-background-size: cover; 
     background-size: cover; 
     padding: 180px 0 180px 0; 
-    height: auto; 
+    height: 100%; 
   }
 
   .hero h1 {
@@ -219,27 +219,26 @@ a:focus {
     margin: 10px 0 10px; 
     font-weight: 900; 
     color: #fff;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
   }
   .hero p {
     font-size: 44px; 
     font-weight: 700; 
     color: #fefefe;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
   }
 
   .hero a {
     font-size: 20px;
     background-color: transparent;
-    text-decoration-color: white;
-    text-decoration: none;
+    color: white;
+    text-decoration-line: none;
     border-color: white;
   }
 
-  .hero a:hover,
-  .hero a:focus {
-    background-color: #7a9cb7; 
-    text-decoration-color: black;
+  .hero a:hover {
+    background-color: white; 
+    color: black;
     text-decoration-line: none;
 }
 }
@@ -273,16 +272,15 @@ a:focus {
 
   .hero a {
     font-size: 20px;
+    color: white;
     background-color: transparent;
-    text-decoration-color: white;
-    text-decoration: none;
+    text-decoration-line: none;
     border-color: white;
   }
 
-  .hero a:hover,
-  .hero a:focus {
-    background-color: #7a9cb7; 
-    text-decoration-color: black;
+  .hero a:hover{
+    background-color: white; 
+    color: black;
     text-decoration-line: none;
 }
 }
@@ -304,18 +302,17 @@ a:focus {
   }
 
   .section-heading a {
-    text-decoration-color: white;
-    text-decoration: none;
+    color: black;
+    text-decoration-line: none;
     font-size: 20px;
     background-color: transparent;
     margin-bottom: 30px;
     border-color: black;
   }
 
-  .section-heading a:hover,
-  .section-heading a:focus {
-    background-color: #7a9cb7; 
-    text-decoration-color: black;
+  .section-heading a:hover {
+    background-color: black; 
+    color: white;
     text-decoration-line: none;
 }
 }
@@ -329,18 +326,17 @@ a:focus {
   }
 
   .section-heading a {
-    text-decoration-color: black;
-    text-decoration: none;
+    color: black;
+    text-decoration-line: none;
     font-size: 20px;
     background-color: transparent;
     margin-bottom: 10px;
     border-color: black;
   }
 
-  .section-heading a:hover,
-  .section-heading a:focus {
-    background-color: #7a9cb7; 
-    text-decoration-color: black;
+  .section-heading a:hover {
+    background-color: black; 
+    color: white;
     text-decoration-line: none;
 }
 }
@@ -368,7 +364,7 @@ a:focus {
 
 .highlight-dark {
   background-color: rgba(0,0,0,.5);
-  padding: 40px;
+  padding: 30px 300px;
   display: inline-block;
   color: #fff;
 }
@@ -405,7 +401,7 @@ a:focus {
 
 .highlight-dark {
   background-color: rgba(0,0,0,.5);
-  padding: 5px;
+  padding: 50px ;
   display: inline-block;
   color: #fff;
 }
