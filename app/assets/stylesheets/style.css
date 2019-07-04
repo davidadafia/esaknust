@@ -176,7 +176,7 @@ a:focus {
 ============================ */
 
 /* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
-@media screen and (min-width: 601px) {
+@media screen and (min-width: 701px) {
   .hero { background: url(/assets/hero-bg.jpg) no-repeat center center; 
     width:100%; 
     background-attachment: fixed; 
@@ -219,7 +219,7 @@ a:focus {
 }
 
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .hero { background: url(/assets/heroo-bg.jpg) no-repeat center center; 
     width:100%; 
     background-attachment: fixed; 
@@ -269,7 +269,7 @@ a:focus {
 --- The Mains Page
 ============================ */
 /* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
-@media screen and (min-width: 601px) {
+@media screen and (min-width: 701px) {
   .section-heading {
     padding-top: 50px; 
     padding-bottom: 35px; 
@@ -293,7 +293,7 @@ a:focus {
 }
 
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .section-heading {
     padding-top: 20px; 
     padding-bottom: 20px; 
@@ -324,7 +324,7 @@ a:focus {
 /* ==========================
 --- Parallax
 ============================= */
-@media screen and (min-width: 601px) {
+@media screen and (min-width: 701px) {
 #parallax{ 
   background: url("../assets/3.jpg") no-repeat center center; 
   width:100%; 
@@ -361,7 +361,7 @@ a:focus {
 }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
 #parallax{ 
   background: url("../assets/3.jpg") no-repeat center center; 
   width:100%; 
