@@ -81,7 +81,8 @@ a:focus {
 ============================ */
 .navigation {
   margin:0 0 0;
-  padding:0;
+  padding-top: 10px;
+  padding-bottom: 0;
 }
 
 #navigation .navbar {
@@ -150,6 +151,7 @@ a:focus {
 .navbar .nav > li > a:focus,
 .navbar .nav > li > a:active,
 .navbar .nav > li.active > a {
+    color: #41423d;
     text-decoration: none;
     background: none !important;
     outline: 0 none;
