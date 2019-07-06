@@ -1,91 +1,72 @@
-<style>
-body {
-    background: -webkit-linear-gradient(90deg, #FF512F 10%, #DD2476 90%);
-    background: -moz-linear-gradient(90deg, #FF512F 10%, #DD2476 90%);
-    background: -ms-linear-gradient(90deg, #FF512F 10%, #DD2476 90%);
-    background: -o-linear-gradient(90deg, #FF512F 10%, #DD2476 90%);
-    background: linear-gradient(90deg, #FF512F 10%, #DD2476 90%);
-    font-family: 'Open Sans', sans-serif!important;
-}
-</style>
-<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    Menu <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand" href="/years/index">
-                     <span class="light" style="color: white;">ESA KNUST</span>
-                </a>
-            </div>
+  <!-- Navigation -->
+  <div id="navigation" class="navbar navbar-fixed-top navbar-default" role="navigation">
+      <div class="container">
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li> <% if current_user %>
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#intro">Pascology</a>
+        </div>
+
+        <div class="navigation">
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <nav>
+              <ul class="nav navbar-nav navbar-right">
+                <li class="current"><a href="#intro">Home</a></li>
+                <li> <% if current_user %>
                     <%= link_to 'LOGOUT', '/users/sign_out' %>
                     <% else %></li>
-                    <li class="page-scroll">  <%= link_to 'LOGIN', '/users/sign_in' %></li>
-                    <li class="page-scroll"> <%= link_to 'SIGNUP', '/users/sign_up' %></li>
-                    <% end %> 
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+                    <li>  <%= link_to 'LOGIN', '/users/sign_in' %></li>
+                    <li> <%= link_to 'SIGNUP', '/users/sign_up' %></li>
+                    <% end %>
+              </ul>
+            </nav>
+          </div>
+          <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container -->
-    </nav>
-<div class="headernew">
-<div class="text-center">
-                    <div class="table col-md-6">
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                     <div><h1 class="text-center" style="color: white;">LOGIN</h1></div>
-                    <ul>
-                        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>     
-                        <il> <div class="field">
-                             <%= f.label :email %><br>
-                             <%= f.email_field :email, autofocus: true, :style =>"background-color: white;" %>
-                             </div>
-                        </il>
-                        <br> 
-                        <il>    
-                            <div class="field">
-                            <%= f.label :password_shh_its_a_secret %><br>
-                            <%= f.password_field :password, autocomplete: "off" %>
-                            </div>                
-                            <% if devise_mapping.rememberable? -%>
-                        </il>
-                        <br>    
-                        <il>    
-                            <div class="field">
-                            <%= f.check_box :remember_me %>
-                            <%= f.label :remember_me %>
-                            </div>
-                            <% end -%>
-                        </il>
-                        <il>     
-                            <div class="actions" style="color: black;">
-                            <%= f.submit'Log in', :class => "btn btn-info btn-lg" %>
-                            </div> 
-                            <br>
-                          
-                            <% end %>
-                        </il>
-                        <h3 style="color: white;">Not yet a member? Click Sign Up.</h3>
-                        <li style="color: white;">  
-                            <%= render "devise/shared/links" %>
-                        </li>
-                    </ul>
-            </div>
 
-                    </div>
-<br>
-<br>
-                    </div>
+      </div>
+    </div>
+  <!-- /Navigation -->
+<section class="vilain text-center">
+<h1 class="">LOGIN</h1>
+<form class="form-horizontal container">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+    <div class="col-sm-4">
+      <%= f.email_field :email, autofocus: true, :class=>"form-control", :placeholder=>"Your Email" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+    <div class="col-sm-4">
+      <%= f.password_field :password, autocomplete: "off", :class=>"form-control", :placeholder=>"SHHH!! don't say it out loud." %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-2">
+      <div class="checkbox">
+        <label>
+          <% if devise_mapping.rememberable? -%>
+            <%= f.check_box :remember_me %>
+            <%= f.label :remember_me %>
+          <% end %>
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-4">
+        <%= f.submit'Log in', :class => "btn btn-success btn-lg" %>
+    </div>
+    <% end %>
+    <br>
+   <!-- <%= render "devise/shared/links" %>-->
+  </div>
+</form>
+</section>
