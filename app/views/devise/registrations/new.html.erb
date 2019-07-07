@@ -1,78 +1,75 @@
-  <!-- Navigation -->
-  <div id="navigation" class="navbar navbar-fixed-top navbar-default" role="navigation">
-      <div class="container">
-
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#intro">Pascology</a>
-        </div>
-
-        <div class="navigation">
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <nav>
-              <ul class="nav navbar-nav navbar-right">
-                <li class="current"><a href="#intro">Home</a></li>
-                <li> <% if current_user %>
-                    <%= link_to 'LOGOUT', '/users/sign_out' %>
-                    <% else %></li>
-                    <li>  <%= link_to 'LOGIN', '/users/sign_in' %></li>
-                    <li> <%= link_to 'SIGNUP', '/users/sign_up' %></li>
-                    <% end %>
-              </ul>
-            </nav>
-          </div>
-          <!-- /.navbar-collapse -->
-        </div>
-
+<div id="navigation" class="navbar navbar-fixed-top navbar-default" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#intro">Pascology</a>
+    </div>
+    <div class="navigation">
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <nav>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="current"><a href="#intro">Home</a></li>
+              <li> 
+                <% if current_user %>
+                <%= link_to 'LOGOUT', '/users/sign_out' %>
+                <% else %>       
+              </li>
+              <li><%= link_to 'LOGIN', '/users/sign_in' %></li>
+              <li> <%= link_to 'SIGNUP', '/users/sign_up' %></li>
+              <% end %>
+          </ul>
+        </nav>
       </div>
     </div>
+  </div>
+</div>
   <!-- /Navigation -->
 <section class="vilain text-center"> 
   <h1 class="">Sign UP</h1> 
-<form class="form-horizontal container">
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-            <%= devise_error_messages! %>
-  <div class="form-group">
-    <label for="" class="col-sm-2 control-label">Name</label>
-    <div class="col-sm-6">
-      <%= f.text_field :user_name, autofocus: true, :class=>"form-control", :placeholder=>"What ur mum calls you" %>
+  <form class="form-horizontal container">
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <p style="color: white;"><%= devise_error_messages! %></p>
+    <div class="form-group">
+      <label for="" class="col-sm-2 control-label">Name</label>
+      <div class="col-sm-6">
+        <%= f.text_field :user_name, autofocus: true, :class=>"form-control", :placeholder=>"What ur mum calls you" %>
+      </div>
     </div>
-  </div>
-  <div class="form-group">
-    <label for="integer" class="col-sm-2 control-label">Number</label>
-    <div class="col-sm-6">
-      <%= f.number_field :whatsapp, :class=>"form-control", :placeholder=>"WhatsApp Number" %>
+    <div class="form-group">
+      <label for="integer" class="col-sm-2 control-label">Number</label>
+      <div class="col-sm-6">
+        <%= f.number_field :whatsapp, :class=>"form-control", :placeholder=>"WhatsApp Number" %>
+      </div>
     </div>
-  </div>
-  <div class="form-group">
-    <label for="email" class="col-sm-2 control-label" >Email</label>
-    <div class="col-sm-6">
-      <%= f.email_field :email, :class=>"form-control", :placeholder=>"Herh!! are you still using YAHOO?" %>
+    <div class="form-group">
+      <label for="email" class="col-sm-2 control-label" >Email</label>
+      <div class="col-sm-6">
+        <%= f.email_field :email, :class=>"form-control", :placeholder=>"Herh!! are you still using YAHOO?" %>
+      </div>
     </div>
-  </div>
-  <div class="form-group">
-    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-    <div class="col-sm-6">
-    <%= f.password_field :password, autocomplete: "off", :class=>"form-control" %>
-      <% if @minimum_password_length %>
-        <p style="color: white;">(<%= @minimum_password_length %> characters minimum)</p>
+    <div class="form-group">
+      <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+      <div class="col-sm-6">
+        <%= f.password_field :password, autocomplete: "off", :class=>"form-control" %>
+        <% if @minimum_password_length %>
+          <p style="color: white;">(<%= @minimum_password_length %> characters minimum)</p>
         <% end %>
+      </div>
     </div>
-  </div>
-  <div class="form-group">
-    <label for="inputPassword3" class="col-sm-2 control-label">Retype Password</label>
-    <div class="col-sm-6">
+    <div class="form-group">
+      <label for="inputPassword3" class="col-sm-2 control-label">Retype Password</label>
+      <div class="col-sm-6">
       <%= f.password_field :password_confirmation, autocomplete: "off", :class=>"form-control", :placeholder=>"Type your password again quickly they are watching" %>
+      </div>
     </div>
-  </div>
-  <div class="form-group col-md-6">
-    <div class="actions" style="color: black;"><%= f.submit "Sign up", :class => "btn btn-success btn-lg" %></div>
-    <% end %>
-  </div>
-</form>
+    <div class="form-group col-md-6">
+      <div class="actions" style="color: black;"><%= f.submit "Sign up", :class => "btn btn-success btn-lg" %>
+      </div>
+    </div>
+  <% end %>
+  </form>
 </section>
