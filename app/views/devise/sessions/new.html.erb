@@ -32,10 +32,10 @@
       </div>
     </div>
   <!-- /Navigation -->
-<section class="vilain text-center">
+<section class="vilain text-center form-horizontal">
   <h1 class="">LOGIN</h1>
-  <form class="table form-horizontal container">
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <form class="table form-horizontal container">
     <div class="form-group">
       <label class="col-sm-2 control-label">Email</label>
         <div class="field col-sm-4">
@@ -66,6 +66,6 @@
       </div>
       <!-- <%= render "devise/shared/links" %>-->
     </div>
-  <% end %>
   </form>
+  <% end %>
 </section>
