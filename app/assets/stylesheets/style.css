@@ -473,3 +473,68 @@ label {
 --- The End Of LogIn & SignIn Page
 ====================================================
 ================================================= */
+/* =================================================
+====================================================
+--- The Classroom Course list Page
+====================================================
+================================================= */
+
+.spidey a{
+  color: black;
+  font-weight: 700;
+}
+
+.spidey a:hover {
+    background-color: black; 
+    color: white;
+}
+
+/* =================================================
+====================================================
+--- The End Of Classroom Course list Page
+====================================================
+================================================= */
+/* =================================================
+====================================================
+--- The Classroom Page
+====================================================
+================================================= */
+@media screen and (min-width: 769px) {
+.herog a {
+    color: black;
+    text-decoration-line: none;
+    font-size: 20px;
+    background-color: transparent;
+    margin-bottom: 30px;
+    border-color: black;
+  }
+
+  .herog a:hover {
+    background-color: black; 
+    color: white;
+    text-decoration-line: none;
+}
+}
+
+@media screen and (max-width: 768px) {
+.herog a {
+    color: black;
+    text-decoration-line: none;
+    font-size: 20px;
+    background-color: transparent;
+    margin-bottom: 10px;
+    border-color: black;
+  }
+
+  .herog a:hover {
+    background-color: black; 
+    color: white;
+    text-decoration-line: none;
+}
+}
+
+/* =================================================
+====================================================
+--- The Classroom Page
+====================================================
+================================================= */

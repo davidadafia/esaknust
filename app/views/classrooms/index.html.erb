@@ -16,10 +16,10 @@
                     <ul>
                         <li class="list-group-item">
                             <div>
-                                <label>
-                                   <%= link_to classroom.id%>
-                                   <%= link_to classroom.title, classroom_path(classroom)%>
-                                </label>
+                                <div class="spidey">
+                                   <a><%= link_to classroom.id%></a>
+                                   <a><%= link_to classroom.title, classroom_path(classroom)%></a>
+                                </div>
                             </div>
                         </li>
                     </ul>
