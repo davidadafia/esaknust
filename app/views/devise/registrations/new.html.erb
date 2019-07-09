@@ -12,7 +12,7 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <nav>
           <ul class="nav navbar-nav navbar-right">
-            <li class="current"><a href="#intro">Home</a></li>
+            <li class="current"><%= link_to 'HOME',years_index_path %></li>
               <li> 
                 <% if current_user %>
                 <%= link_to 'LOGOUT', '/users/sign_out' %>
