@@ -464,7 +464,7 @@ section .lady {
   font-weight: 700;
 }
 
-label {
+section .lady {
   color: white;
 }
 }
