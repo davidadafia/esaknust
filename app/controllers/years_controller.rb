@@ -1,5 +1,5 @@
 class YearsController < ApplicationController
-  def index
+  def indexz
   	@classrooms = Classroom.all
   	@years = Year.all
   end 
