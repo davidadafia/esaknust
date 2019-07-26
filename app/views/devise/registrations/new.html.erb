@@ -52,6 +52,25 @@
       </div>
     </div>
     <div class="form-group">
+      <label for="sel1" class="lady col-sm-2 control-label">Major</label>
+        <div class="col-sm-6">
+          <%= f.select(:major, ['NONE','ECONOMICS','GEOGRAPHY','FRENCH'], {}, { :class => 'form-control' }) %>
+        </div>
+    </div>
+    <div class="form-group">
+      <label for="sel1" class="lady col-sm-2 control-label">Minor</label>
+        <div class="col-sm-6">
+          <%= f.select(:minor, ['NONE','ECONOMICS','GEOGRAPHY','FRENCH'], {}, { :class => 'form-control' }) %>
+        </div>
+    </div>
+    <div class="form-group">
+      <label for="sel1" class="lady col-sm-2 control-label">level</label>
+        <div class="col-sm-6">
+          <%= f.select(:level, ['NONE','100','200','300','400'], {}, { :class => 'form-control' }) %>
+        </div>
+    </div>
+    
+    <div class="form-group">
       <label for="inputPassword3" class="lady col-sm-2 control-label">Password</label>
       <div class="col-sm-6">
         <%= f.password_field :password, autocomplete: "off", :class=>"form-control" %>

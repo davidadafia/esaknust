@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   acts_as_commontator
 
    def user_params
-      params.require(:user).permit(:user_name, :whatsapp, :email, :password, :password_confirmation)
+      params.require(:user).permit(:user_name, :whatsapp, :major, :level, :minor, :email, :password, :password_confirmation)
    end   
 
    belongs_to :classroom

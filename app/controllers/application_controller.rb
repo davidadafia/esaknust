@@ -5,8 +5,8 @@ class ApplicationController < ActionController::Base
     before_filter :configure_permitted_parameters, if: :devise_controller?
 
   def configure_permitted_parameters
-  	update_attrs = [:password, :password_confirmation, :current_password, :user_name, :whatsapp]
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:user_name, :whatsapp])
+  	update_attrs = [:password, :password_confirmation, :current_password, :user_name, :whatsapp, :major, :minor, :level]
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:user_name, :whatsapp, :major, :minor, :level])
     devise_parameter_sanitizer.permit :account_update, keys: update_attrs
   end
 

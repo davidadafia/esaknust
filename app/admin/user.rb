@@ -3,7 +3,7 @@ ActiveAdmin.register User do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
-permit_params :email, :created_at, :last_sign_in_at, :current_sign_in_at, :user_name, :whatsapp
+permit_params :email, :created_at, :last_sign_in_at, :current_sign_in_at, :user_name, :major, :level, :minor, :whatsapp
 #
 # or
 #
@@ -16,6 +16,9 @@ permit_params :email, :created_at, :last_sign_in_at, :current_sign_in_at, :user_
     index do
     column :user_name
     column :whatsapp
+    column :major
+    column :minor
+    column :level
     column :email
     column :created_at
     column :last_sign_in_at
