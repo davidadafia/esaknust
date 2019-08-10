@@ -34,7 +34,6 @@ Rails.application.routes.draw do
   get 'homes/index'
 
 
-  mount LetsEncrypt::Engine => '/.well-known'
   
   mount Commontator::Engine => '/commontator'
   # The priority is based upon order of creation: first created -> highest priority.
