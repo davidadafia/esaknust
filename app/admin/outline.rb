@@ -4,7 +4,7 @@ ActiveAdmin.register Outline do
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
 	
- permit_params :id, :title, :body, :classroom_id
+ permit_params :id, :title, :body, :classroom_id, :sem_id
 #
 # or
 #
@@ -18,6 +18,7 @@ ActiveAdmin.register Outline do
     column :id
     column :title
     column :classroom_id
+    column :sem_id    
     column :created_at
     column '' do |outline|
       link_to 'VIEW', admin_outline_path(outline) if authorized? :update, outline

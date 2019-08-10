@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190725225006) do
+ActiveRecord::Schema.define(version: 20190810133855) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -104,12 +104,28 @@ ActiveRecord::Schema.define(version: 20190725225006) do
     t.index ["commontable_id", "commontable_type"], name: "index_commontator_threads_on_c_id_and_c_type", unique: true, using: :btree
   end
 
+  create_table "letsencrypt_certificates", force: :cascade do |t|
+    t.string   "domain"
+    t.text     "certificate"
+    t.text     "intermediaries"
+    t.text     "key"
+    t.datetime "expires_at"
+    t.datetime "renew_after"
+    t.string   "verification_path"
+    t.string   "verification_string"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.index ["domain"], name: "index_letsencrypt_certificates_on_domain", using: :btree
+    t.index ["renew_after"], name: "index_letsencrypt_certificates_on_renew_after", using: :btree
+  end
+
   create_table "outlines", force: :cascade do |t|
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.string   "title"
     t.integer  "classroom_id"
     t.text     "body"
+    t.integer  "sem_id"
   end
 
   create_table "parts", force: :cascade do |t|
@@ -143,6 +159,14 @@ ActiveRecord::Schema.define(version: 20190725225006) do
     t.string   "title"
     t.integer  "classroom_id"
     t.text     "body"
+  end
+
+  create_table "sems", force: :cascade do |t|
+    t.string   "title"
+    t.text     "body"
+    t.integer  "classroom_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "users", force: :cascade do |t|

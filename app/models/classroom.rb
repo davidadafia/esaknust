@@ -5,6 +5,8 @@ class Classroom < ActiveRecord::Base
     accepts_nested_attributes_for :users
     has_many :outlines
     accepts_nested_attributes_for :outlines
+    has_many :sems
+    accepts_nested_attributes_for :sems
     has_many :resources
     accepts_nested_attributes_for :resources
     has_many :questions

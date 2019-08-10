@@ -1,13 +1,15 @@
 class ClassroomsController < ApplicationController
     before_action :authenticate_user!
   def index
-    @classrooms = Classroom.all
     @years = Year.all
+    @classrooms = Classroom.all.order(created_at: :asc)
   end
 
   def show
   	@classroom = Classroom.find(params[:id])
-    @classrooms = Classroom.all
+    @classrooms = Classroom.all.order(created_at: :asc)
+    @sem = Sem.find(params[:id])
+    @sems = Sem.all.order(created_at: :asc)
     @outline = Outline.find(params[:id])
     @outlines = Outline.all
     @resource = Resource.find(params[:id])

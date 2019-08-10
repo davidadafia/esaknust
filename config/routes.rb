@@ -34,12 +34,14 @@ Rails.application.routes.draw do
   get 'homes/index'
 
 
+  mount LetsEncrypt::Engine => '/.well-known'
+  
   mount Commontator::Engine => '/commontator'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'years#index'
+   root 'homes#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -60,11 +62,11 @@ Rails.application.routes.draw do
   resources :parts
 
   resources :years do
-    resources :title, :id
+    resources :classrooms, :title, :id
   end
 
   resources :classrooms do
-    resources :title, :id, :body, :courses_id
+    resources :title, :id, :body, :year_id
   end
 
   resources :blogs do

@@ -1,19 +1,5 @@
-  <!-- Section: intro -->
-  <section class="hero" id="intro">
-      <div class="container">
-          <div class="animatedParent container">
-            <h1 class="animated fadeInDown col-md-12 h-bold">PASCOLOGY</h1>
-            <p class="animated fadeInUp h-bold col-md-12 pull-left">We study with you.</p>
-            <h3 class="animated fadeInUp col-lg-12 pull-left">
-              <a  href="#courses" class="btn btn-lg" id="btn-scroll">FIND COURSES</a>
-            </h3>
-          </div>
-      </div>
-  </section>
-  <!-- /Section: intro -->
-
   <!-- Navigation -->
-  <div id="navigation" class="navbar navbar-fixed navbar-default" role="navigation">
+  <div id="navigation" class="navbar navbar-fixed-top navbar-default" role="navigation">
       <div class="container">
 
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -30,7 +16,7 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <nav>
               <ul class="nav navbar-nav navbar-right">
-                <li class="current"><a href="#intro">Home</a></li>
+                <li class="current"><%= link_to 'HOME',homes_index_path %></li>
                 <li> <% if current_user %>
                     <%= link_to 'LOGOUT', '/users/sign_out' %>
                     <% else %></li>
@@ -46,40 +32,36 @@
       </div>
     </div>
   <!-- /Navigation -->
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container text-center">
+    <h2><strong>welcome <%= current_user.user_name %></strong></h2>
 
-<!-- Courses -->
-  <section class="mains" id="courses">
-    <div class="container">
-      <div class="col-md-12">
-        <div class="wow flipInY" data-wow-offset="0" data-wow-delay="0.4s">
-          <div class="section-heading">
-            <h3 class="h-bold text-center">Looking for something to study?.... We got you. Click below</h3>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section-heading container text-center">
-      <a><%= link_to 'VIEW ALL COURSES',classrooms_index_path, :class=>"btn btn-lg" %></a>
-    </div>
-  </section>
-<!-- /Courses -->
+<% @years.each do |year| %>
 
-  <!-- Section: parallax -->
-  <section id="parallax" class="home-section parallax text-light text-center" data-stellar-background-ratio="0.5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="testimonialslide clearfix flexslider">
-            <ul class="slides">
-              <li class="highlight-dark text-center">
-                davidadafia@gmail.com <br>
-                (+233)24 291 1291 <br>
-                <div><a style="color: white;" href="https://www.instagram.com/pascology/">Instagram</a></div><br>
-                <h4>David Adafia</h4>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+<div class="goldfish container text-center ">
+ <div class="row">
+  <div class="col-md-12">
+   <div class="row">
+    <div class="spidey">
+     <table class="table table-striped">
+      <thead>
+       <tr><th class="text-center"><h5><%= year.title%></h5></th></tr>
+      </thead>
+      <tbody>
+       <% year.classrooms.each do |classroom| %>
+        <tr><td><a><%= link_to classroom.title, classroom_path(classroom)%></a></td></tr>
+       <% end %>
+       <br>
+      </tbody>
+     </table>
     </div>
-  </section>
+   </div>
+  </div>
+ </div>
+</div>
+<% end %>
+</div>

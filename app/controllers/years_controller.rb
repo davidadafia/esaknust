@@ -1,13 +1,13 @@
 class YearsController < ApplicationController
-  def indexz
-  	@classrooms = Classroom.all
-  	@years = Year.all
+  def index
+    @years = Year.all
+  	@classrooms = Classroom.all.order(created_at: :asc)
   end 
 
   def show
   	@years = Year.all
   	@year = Year.find(params[:id])
-  	@classrooms = Classroom.all
+  	@classrooms = Classroom.all.order(created_at: :asc)
   	@Classroom = Classroom.find(params[:id])
   end
 
