@@ -52,7 +52,7 @@
        <tr><th class="text-center"><h5><%= year.title%></h5></th></tr>
       </thead>
       <tbody>
-       <% year.classrooms.each do |classroom| %>
+       <% year.classrooms.order(created_at: :asc).each do |classroom| %>
         <tr><td><a><%= link_to classroom.title, classroom_path(classroom)%></a></td></tr>
        <% end %>
        <br>

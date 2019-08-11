@@ -21,7 +21,7 @@ class SemsController < ApplicationController
 
 private
   def sem_params
-    params.require(:sem).permit(:title, :body, :id)
+    params.require(:sem).permit(:title, :body, :id, :footer)
     params.require(:classroom).permit(:classroom_id)
   end   
 end
