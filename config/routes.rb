@@ -23,19 +23,12 @@ Rails.application.routes.draw do
 
   get 'classrooms/mates'
 
-  get 'blogs/index'
-
-  get 'blogs/show'
-
-  get 'abouts/index'
-
-  get 'abouts/team'
-
   get 'homes/index'
 
 
   
   mount Commontator::Engine => '/commontator'
+  mount LetsEncrypt::Engine => '/.well-known'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
