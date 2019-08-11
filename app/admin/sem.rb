@@ -18,10 +18,10 @@ ActiveAdmin.register Sem do
     column :id
     column :title
     column :body
-    column :footer
     column :classroom_id
+    column :footer
     column :created_at
-    column 'EDIT' do |sem|
+    column 'sems' do |sem|
       link_to 'VIEW', admin_sem_path(sem) if authorized? :update, sem
     end
   end
