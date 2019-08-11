@@ -2,13 +2,13 @@ class YearsController < ApplicationController
   before_action :authenticate_user!
   def index
     @years = Year.all
-  	@classrooms = Classroom.all.order(created_at: :asc)
+  	@classrooms = Classroom.all
   end 
 
   def show
   	@years = Year.all
   	@year = Year.find(params[:id])
-  	@classrooms = Classroom.all.order(created_at: :asc)
+  	@classrooms = Classroom.all
   	@Classroom = Classroom.find(params[:id])
   end
 
