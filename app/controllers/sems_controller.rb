@@ -5,7 +5,6 @@ class SemsController < ApplicationController
   	@outlines = Outline.all
   	@classroom = Classroom.find(params[:id])
     @classrooms = Classroom.all
-    @sem = Sem.find(params[:id])
     @sems = Sem.all
   end
 
