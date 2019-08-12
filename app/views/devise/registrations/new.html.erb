@@ -35,43 +35,43 @@
   <p style="color: white;"><%= devise_error_messages! %></p>
     <div class="form-group">
       <label for="" class="lady col-sm-2 control-label">Name</label>
-      <div class="col-sm-6">
+      <div class="col-sm-8">
         <%= f.text_field :user_name, autofocus: true, :class=>"form-control", :placeholder=>"What ur mum calls you" %>
       </div>
     </div>
     <div class="form-group">
       <label for="integer" class="lady col-sm-2 control-label">Number</label>
-      <div class="col-sm-6">
+      <div class="col-sm-8">
         <%= f.number_field :whatsapp, :class=>"form-control", :placeholder=>"WhatsApp Number" %>
       </div>
     </div>
     <div class="form-group">
       <label for="email" class="lady col-sm-2 control-label" >Email</label>
-      <div class="col-sm-6">
+      <div class="col-sm-8">
         <%= f.email_field :email, :class=>"form-control", :placeholder=>"Herh!! are you still using YAHOO?" %>
       </div>
     </div>
     <div class="form-group">
       <label for="sel1" class="lady col-sm-2 control-label">Major</label>
-        <div class="col-sm-6">
+        <div class="col-sm-8">
           <%= f.select(:major, ['NONE','ECONOMICS','GEOGRAPHY','FRENCH'], {}, { :class => 'form-control' }) %>
         </div>
     </div>
     <div class="form-group">
       <label for="sel1" class="lady col-sm-2 control-label">Minor</label>
-        <div class="col-sm-6">
+        <div class="col-sm-8">
           <%= f.select(:minor, ['NONE','ECONOMICS','GEOGRAPHY','FRENCH'], {}, { :class => 'form-control' }) %>
         </div>
     </div>
     <div class="form-group">
       <label for="sel1" class="lady col-sm-2 control-label">level</label>
-        <div class="col-sm-6">
+        <div class="col-sm-8">
           <%= f.select(:level, ['NONE','100','200','300','400'], {}, { :class => 'form-control' }) %>
         </div>
     </div>
     <div class="form-group">
       <label for="inputPassword3" class="lady col-sm-2 control-label">Password</label>
-      <div class="col-sm-6">
+      <div class="col-sm-8">
         <%= f.password_field :password, autocomplete: "off", :class=>"form-control" %>
         <% if @minimum_password_length %>
           <p style="color: white;">(<%= @minimum_password_length %> characters minimum)</p>
@@ -80,7 +80,7 @@
     </div>
     <div class="form-group">
       <label for="inputPassword3" class="lady col-sm-2 control-label">Retype Password</label>
-      <div class="col-sm-6">
+      <div class="col-sm-8">
       <%= f.password_field :password_confirmation, autocomplete: "off", :class=>"form-control", :placeholder=>"Type your password again quickly they are watching" %>
       </div>
     </div>

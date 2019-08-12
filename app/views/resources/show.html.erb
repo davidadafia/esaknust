@@ -17,6 +17,7 @@
             <nav>
               <ul class="nav navbar-nav navbar-right">
                 <li class="current"><%= link_to 'HOME',homes_index_path %></li>
+                <li class="current"><%= link_to 'COURSES',years_index_path %></li>
                 <li> <% if current_user %>
                     <%= link_to 'LOGOUT', '/users/sign_out' %>
                     <% else %></li>
