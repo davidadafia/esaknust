@@ -21,7 +21,7 @@ ActiveAdmin.register Sem do
     column :classroom_id
     column :footer
     column :created_at
-    column 'sem' do |sem|
+    column '' do |sem|
       link_to 'VIEW', admin_sem_path(sem) if authorized? :update, sem
     end
   end

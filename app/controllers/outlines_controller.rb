@@ -6,7 +6,7 @@ class OutlinesController < ApplicationController
   	@classroom = Classroom.find(params[:id])
     @classrooms = Classroom.all
     @sem = Sem.find(params[:id])
-    @sems = Sem.all.order(created_at: :asc)
+    @sems = Sem.all
   end
 
   def create
