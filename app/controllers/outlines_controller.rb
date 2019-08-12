@@ -3,8 +3,7 @@ class OutlinesController < ApplicationController
   def show
   	@outline = Outline.find(params[:id])
   	@outlines = Outline.all
-  	@classroom = Classroom.find(params[:id])
-    @classrooms = Classroom.all
+    @sem = Sem.find(params[:id])
     @sems = Sem.all
   end
 
@@ -21,6 +20,6 @@ class OutlinesController < ApplicationController
 private
   def outline_params
     params.require(:outline).permit(:title, :body, :id)
-    params.require(:classroom).permit(:classroom_id)
+    params.require(:classroom).permit(:sem_id)
   end   
 end
