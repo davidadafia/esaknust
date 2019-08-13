@@ -3,7 +3,6 @@ class OutlinesController < ApplicationController
   def show
   	@outline = Outline.find(params[:id])
   	@outlines = Outline.all
-    @sem = Sem.find(params[:id])
     @sems = Sem.all
   end
 
