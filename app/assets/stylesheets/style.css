@@ -537,14 +537,14 @@ section .lady {
 ====================================================
 ================================================= */
 @media screen and (min-width: 769px) {
-video {
+iframe {
   height:398px ;
   width:700px ;
-}
+} 
 }
 
 @media screen and (max-width: 768px) {
-video {
+iframe {
   height:auto ;
   width:100% ;
 }
