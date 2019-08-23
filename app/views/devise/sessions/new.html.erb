@@ -35,21 +35,21 @@
 <section class="vilain text-center form-horizontal">
   <h1 class="">LOGIN</h1>
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <form class="table form-horizontal container">
+  <form class="row col-md-12 table form-horizontal container ">
     <div class="form-group">
       <label class="lady control-label">Email</label>
         <div class="field">
-          <%= f.email_field :email, autofocus: true, :class=>"form-control", :placeholder=>"Your Email" %>
+          <%= f.email_field :email, autofocus: true, :class=>"align-right form-control", :placeholder=>"Your Email" %>
         </div>
-    </div>
+    </div><br>
     <div class="form-group">
       <label  class="lady control-label">Password</label>
       <div class="field">
         <%= f.password_field :password, autocomplete: "off", :class=>"form-control", :placeholder=>"SHHH!! don't say it out loud." %>
       </div>
-    </div>
+    </div><br>
     <div class="form-group">
-      <div class="field col-sm-offset-2 col-sm-2">
+      <div class="field col-sm-offset-1 col-sm-4">
         <div class="checkbox">
           <% if devise_mapping.rememberable? -%>
             <%= f.check_box :remember_me %>

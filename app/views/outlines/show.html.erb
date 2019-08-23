@@ -46,7 +46,12 @@
     <br>
     <br>
     <div class="col-sm-12 text-center">
-      <div><%= raw(@outline.body) %></div>
+      <% if @outline.cove == current_user.email %> 
+        <div><%= raw(@outline.body) %></div>
+      <% else %>
+        <h3>Sorry fam, pay GHC 50.00 via vodafone mobile money to 0242911291 to access this course.</h3>
+        <h4>After payment kindly whatsapp 0242911291 to confirm. Thank you. You're welcome ;-)</h4>
+      <% end %>
     </div>
   </div>
   <br>
