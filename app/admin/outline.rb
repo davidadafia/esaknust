@@ -4,7 +4,7 @@ ActiveAdmin.register Outline do
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
 	
- permit_params :id, :title, :body, :sem_id, :cove
+ permit_params :id, :title, :body, :sem_id, :paid
 #
 # or
 #
@@ -14,15 +14,14 @@ ActiveAdmin.register Outline do
 #   permitted
 # end
 
-
 	index do
     column :id
     column :title
-    column :cove    
     column :sem_id    
     column :created_at
+    column :paid
     column '' do |outline|
-      link_to 'VIEW', admin_outline_path(outline) if authorized? :update, outline
+    link_to 'VIEW', admin_outline_path(outline) if authorized? :update, outline
     end
   end
 end

@@ -452,7 +452,6 @@ section .lady {
   -moz-background-size: cover; 
   -o-background-size: cover; 
   background-size: cover; 
-  padding: 180px 0 180px 0; 
   height: auto; 
   }
 
@@ -463,7 +462,7 @@ section .lady {
 }
 
 .vilain form {
-  width:70%;
+  width:80%;
   margin: auto;
 }
 

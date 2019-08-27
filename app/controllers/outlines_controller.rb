@@ -4,6 +4,7 @@ class OutlinesController < ApplicationController
   	@outline = Outline.find(params[:id])
   	@outlines = Outline.all
     @sems = Sem.all
+    @fail = "not here"
   end
 
   def create
@@ -18,7 +19,7 @@ class OutlinesController < ApplicationController
 
 private
   def outline_params
-    params.require(:outline).permit(:title, :body, :id, :cove)
+    params.require(:outline).permit(:title, :body, :id)
     params.require(:outlines).permit(:sem_id)
   end   
 end

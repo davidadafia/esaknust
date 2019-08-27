@@ -22,7 +22,7 @@ permit_params :email, :created_at, :last_sign_in_at, :current_sign_in_at, :user_
     column :email
     column :created_at
     column :last_sign_in_at
-	  column :current_sign_in_at
+	column :current_sign_in_at
     column '' do |user|
       link_to 'VIEW', admin_user_path(user) if authorized? :update, user
     end
