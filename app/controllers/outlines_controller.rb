@@ -4,7 +4,6 @@ class OutlinesController < ApplicationController
   	@outline = Outline.find(params[:id])
   	@outlines = Outline.all
     @sems = Sem.all
-    @fail = "not here"
   end
 
   def create

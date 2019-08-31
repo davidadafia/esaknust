@@ -452,7 +452,7 @@ section .lady {
   -moz-background-size: cover; 
   -o-background-size: cover; 
   background-size: cover; 
-  height: auto; 
+  height: 100%; 
   }
 
 .vilain h1 {
@@ -462,7 +462,7 @@ section .lady {
 }
 
 .vilain form {
-  width:100%;
+  width:80%;
   margin: auto;
   
 }
