@@ -444,7 +444,7 @@ section .lady {
 }
 
 @media screen and (max-width: 768px) {
-.vilain { background: url(/assets/vilains.jpg) no-repeat center center; 
+.vilain { background: url(/assets/vilains.jpg) repeat center center; 
   width:100%; 
   -webkit-background-size: cover; 
   -moz-background-size: cover; 
