@@ -423,7 +423,8 @@ a:focus {
   -moz-background-size: cover; 
   -o-background-size: cover; 
   background-size: cover; 
-  height: 100%; 
+  padding: 180px 0 180px 0;
+  height: auto; 
   }
 
 .vilain h1 {
@@ -444,13 +445,15 @@ section .lady {
 }
 
 @media screen and (max-width: 768px) {
-.vilain { background: url(/assets/vilains.jpg) repeat center center; 
-  width:100%; 
+.vilain { background: url(/assets/vilains.jpg) no-repeat center center; 
+  width: auto; 
+  background-attachment: fixed; 
   -webkit-background-size: cover; 
   -moz-background-size: cover; 
   -o-background-size: cover; 
   background-size: cover; 
-  height: 100%;
+  padding: 180px 0 180px 0;
+  height: auto;
   }
 
 .vilain h1 {
