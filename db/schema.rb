@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190828111648) do
+ActiveRecord::Schema.define(version: 20190908102938) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -121,14 +121,13 @@ ActiveRecord::Schema.define(version: 20190828111648) do
   end
 
   create_table "outlines", force: :cascade do |t|
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.string   "title"
     t.integer  "classroom_id"
     t.text     "body"
     t.integer  "sem_id"
-    t.text     "paid"
-    t.string   "money",        default: [],              array: true
+    t.integer  "paid"
   end
 
   create_table "parts", force: :cascade do |t|
@@ -197,7 +196,7 @@ ActiveRecord::Schema.define(version: 20190828111648) do
     t.text     "major"
     t.text     "minor"
     t.integer  "level"
-    t.string   "user_pay"
+    t.integer  "paid"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
