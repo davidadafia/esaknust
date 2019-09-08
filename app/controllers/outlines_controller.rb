@@ -18,7 +18,7 @@ class OutlinesController < ApplicationController
 
 private
   def outline_params
-    params.require(:outline).permit(:title, :body, :id, :paid)
+    params.require(:outline).permit(:title, :body, :id)
     params.require(:outlines).permit(:sem_id)
   end   
 end

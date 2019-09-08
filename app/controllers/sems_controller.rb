@@ -6,6 +6,7 @@ class SemsController < ApplicationController
   	@classroom = Classroom.find(params[:id])
     @classrooms = Classroom.all
     @sems = Sem.all
+    @sem = Sem.find(params[:id])
   end
 
   def create
