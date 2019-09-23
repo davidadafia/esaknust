@@ -12,5 +12,8 @@ class Classroom < ActiveRecord::Base
     belongs_to :year
 	accepts_nested_attributes_for :year
 
+    has_many :payments
+    has_many :users, through: :payments
+
 
 end

@@ -4,6 +4,11 @@ class OutlinesController < ApplicationController
   	@outline = Outline.find(params[:id])
   	@outlines = Outline.all
     @sems = Sem.all
+    @users = User.all
+    @classrooms = Classroom.all
+    @classroom = Classroom.find(params[:id])
+    @payments = Payment.all
+    
   end
 
   def create
