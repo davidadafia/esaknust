@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190921123014) do
+ActiveRecord::Schema.define(version: 20190926122827) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -106,6 +106,15 @@ ActiveRecord::Schema.define(version: 20190921123014) do
     t.index ["renew_after"], name: "index_letsencrypt_certificates_on_renew_after", using: :btree
   end
 
+  create_table "money", force: :cascade do |t|
+    t.string   "value"
+    t.string   "user_name"
+    t.integer  "classroom_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "user_id"
+  end
+
   create_table "outlines", force: :cascade do |t|
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
@@ -121,28 +130,6 @@ ActiveRecord::Schema.define(version: 20190921123014) do
     t.string   "title"
     t.text     "body"
     t.integer  "question_id"
-  end
-
-  create_table "payments", force: :cascade do |t|
-    t.string   "value"
-    t.integer  "classroom_id"
-    t.integer  "user_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
-
-  create_table "pays", force: :cascade do |t|
-    t.string   "title"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "pets", force: :cascade do |t|
-    t.string   "name"
-    t.text     "description"
-    t.string   "image"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
   end
 
   create_table "questions", force: :cascade do |t|

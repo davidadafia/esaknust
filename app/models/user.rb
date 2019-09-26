@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
       params.require(:user).permit(:user_name, :whatsapp, :major, :level, :minor, :email, :password, :password_confirmation)
    end   
 
-   has_many :payments
-   has_many :classrooms, through: :payments
+   has_many :moneys
+   has_many :classrooms, through: :moneys
 end
 

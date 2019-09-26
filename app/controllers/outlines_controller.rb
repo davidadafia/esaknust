@@ -7,8 +7,7 @@ class OutlinesController < ApplicationController
     @users = User.all
     @classrooms = Classroom.all
     @classroom = Classroom.find(params[:id])
-    @payments = Payment.all
-    
+    @moneys = Money.all    
   end
 
   def create

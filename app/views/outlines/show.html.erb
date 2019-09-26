@@ -46,13 +46,11 @@
     <br>
     <br>
     <div class="col-sm-12 text-center">
-      <% @classroom.payments do |classroom| %>
-      <% if @payments.value==classroom_id %> 
+      <% if @outline.sem.paid==current_user.paid %> 
         <div><%= raw(@outline.body) %></div>
       <% else %>
         <h5>Sorry fam. To access this course video and notes for this semester, purchase a MONTHLY SUBSCRIPTION of GHC 45.00 via MTN mobile money to 0543600823.</h3>
         <h5>After payment kindly call or whatsapp 0543600823 to confirm. Thank you and you're welcome ;-)</h4>
-      <% end %>
       <% end %>
     </div>
   </div>
