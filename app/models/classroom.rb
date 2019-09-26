@@ -12,8 +12,8 @@ class Classroom < ActiveRecord::Base
     belongs_to :year
 	accepts_nested_attributes_for :year
 
-    has_many :moneys
-    has_many :users, through: :moneys
+
+    has_many :users
 
 
 end
