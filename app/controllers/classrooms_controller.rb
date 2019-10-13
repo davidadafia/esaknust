@@ -11,10 +11,10 @@ class ClassroomsController < ApplicationController
     @sems = Sem.all
     @outline = Outline.find(params[:id])
     @outlines = Outline.all
-    @resource = Resource.find(params[:id])
     @resources =Resource.all
     @question = Question.find(params[:id])
     @questions =Question.all
+
     commontator_thread_show(@classroom)
   end
 

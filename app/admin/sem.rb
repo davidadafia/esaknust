@@ -4,7 +4,7 @@ ActiveAdmin.register Sem do
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
 	
- permit_params :id, :title, :body, :footer, :classroom_id, :paid
+ permit_params :id, :title, :body, :footer, :classroom_id
 #
 # or
 #
@@ -18,7 +18,6 @@ ActiveAdmin.register Sem do
     column :id
     column :title
     column :body
-    column :paid
     column :classroom_id
     column :footer
     column :created_at

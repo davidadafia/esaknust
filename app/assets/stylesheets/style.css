@@ -634,3 +634,125 @@ iframe {
 --- End Outline Text Size
 ====================================================
 ================================================= */
+
+/* =================================================
+====================================================
+---The Subscription Page
+====================================================
+================================================= */
+@media screen and (min-width: 769px) {
+#pricing {
+  padding: 60px 0 60px 0;
+}
+
+#pricing .box {
+  padding: 40px;
+  margin-bottom: 30px;
+  box-shadow: 0px 0px 90px rgba(73, 78, 92, 0.15);
+  background: #fff;
+  text-align: center;
+}
+
+#pricing h3 {
+  font-weight: 400;
+  margin-bottom: 15px;
+  font-size: 28px;
+}
+
+#pricing h4 {
+  font-size: 46px;
+  color: #0078d7;
+  font-weight: 300;
+}
+
+#pricing h4 sup {
+  font-size: 20px;
+  top: -20px;
+}
+
+
+#pricing h4 span {
+  color: #bababa;
+  font-size: 20px;
+}
+
+#pricing ul {
+  padding: 0;
+  list-style: none;
+  color: black;
+  text-align: center;
+  line-height: 20px;
+}
+
+#pricing ul li {
+  padding-bottom: 12px;
+}
+
+#pricing .featured {
+  border: 2px solid #1dc8cd;
+}
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+
+  #pricing {
+  padding: 60px 0 60px 0;
+}
+
+#pricing .box {
+  padding: 40px;
+  margin-bottom: 30px;
+  box-shadow: 0px 0px 90px rgba(73, 78, 92, 0.15);
+  background: #fff;
+  text-align: center;
+}
+
+#pricing h3 {
+  font-weight: 400;
+  margin-bottom: 15px;
+  font-size: 25px;
+}
+
+#pricing h4 {
+  font-size: 40px;
+  color: #0078d7;
+  font-weight: 300;
+}
+
+#pricing h4 sup {
+  font-size: 20px;
+  top: -20px;
+}
+
+
+#pricing h4 span {
+  color: #bababa;
+  font-size: 20px;
+}
+
+#pricing ul {
+  padding: 0;
+  list-style: none;
+  color: black;
+  text-align: center;
+  line-height: 20px;
+}
+
+#pricing ul li {
+  padding-bottom: 12px;
+}
+
+#pricing .featured {
+  border: 2px solid #1dc8cd;
+}
+
+}
+
+/* =================================================
+====================================================
+--- End Subscription Page
+====================================================
+================================================= */

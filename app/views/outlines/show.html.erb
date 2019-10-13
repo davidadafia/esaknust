@@ -43,14 +43,36 @@
       <h1><strong><%= @outline.title %></strong></h1>
   </div>  
     <br>
-    <br>
-    <br>
     <div class="col-sm-12 text-center">
-      <% if @outline.sem.paid==current_user.paid %> 
+      <% if current_user.paid ==1 %>
         <div><%= raw(@outline.body) %></div>
       <% else %>
-        <h5>Sorry fam. To access this course video and notes for this semester, purchase a MONTHLY SUBSCRIPTION of GHC 45.00 via MTN mobile money to 0543600823.</h3>
-        <h5>After payment kindly call or whatsapp 0543600823 to confirm. Thank you and you're welcome ;-)</h4>
+      <section id="pricing" class="section-bg">
+        <div class="row">
+          <div class="col-lg-6 col-md-6">
+            <div class="box featured" data-aos="fade-right">
+              <h3>MONTHLY SUBSCRIPTION</h3>
+              <h4><sup>GHS</sup>60.00</h4>
+              <ul>
+                <li><h6>PDFs</h6> </li>
+                <li><h6> STUDY NOTES</h6></li>
+                <li><h6>LECTURE VIDEOS</h6></li>
+                <li><h6>TRY QUESTIONS AND ANSWRES</h6></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <div class="box featured" data-aos="fade-right">
+              <h3>MTN MOBILE MONEY PAYMENT</h3>
+              <h4><sup>MTN</sup>054 360 0823</h4>
+              <ul>
+                <li><h6>A monthly subcription gives you access to all features for all courses across all year groups (level 100 - level 400)</h6> </li>
+                <li><h6> Kindly whatsapp or call this number to confirm payment. Thank you.</h6></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
       <% end %>
     </div>
   </div>
