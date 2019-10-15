@@ -11,6 +11,7 @@ gem 'commontator', '~> 4.11.1'
 gem 'acts_as_votable'
 gem 'activeadmin'
 gem 'formtastic'
+gem 'mathjax-rails'
 # Plus integrations with:
 gem 'devise'
 gem 'cancan' # or cancancan

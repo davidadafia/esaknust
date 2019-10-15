@@ -29,6 +29,8 @@ Rails.application.routes.draw do
   
   mount Commontator::Engine => '/commontator'
   mount LetsEncrypt::Engine => '/.well-known'
+
+  mathjax 'mathjax'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

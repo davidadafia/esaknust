@@ -141,6 +141,8 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.7.1)
       mini_mime (>= 0.1.1)
+    mathjax-rails (2.6.1)
+      railties (>= 3.0)
     method_source (0.9.2)
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
@@ -274,6 +276,7 @@ DEPENDENCIES
   formtastic
   jbuilder (~> 2.0)
   jquery-rails
+  mathjax-rails
   pg
   pundit
   rails
