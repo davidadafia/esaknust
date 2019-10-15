@@ -668,12 +668,13 @@ iframe {
 #pricing h4 sup {
   font-size: 20px;
   top: -20px;
+  color: gold;
 }
 
 
 #pricing h4 span {
-  color: #bababa;
-  font-size: 20px;
+  color: black;
+  font-size: 40px;
 }
 
 #pricing ul {
@@ -698,7 +699,7 @@ iframe {
 
 @media screen and (max-width: 768px) {
 
-  #pricing {
+#pricing {
   padding: 60px 0 60px 0;
 }
 
@@ -717,7 +718,7 @@ iframe {
 }
 
 #pricing h4 {
-  font-size: 40px;
+  font-size: 30px;
   color: #0078d7;
   font-weight: 300;
 }
@@ -725,12 +726,14 @@ iframe {
 #pricing h4 sup {
   font-size: 20px;
   top: -20px;
+  color: gold;
 }
 
 
 #pricing h4 span {
-  color: #bababa;
-  font-size: 20px;
+  color: black;
+  font-size: 30px;
+
 }
 
 #pricing ul {
