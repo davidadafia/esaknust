@@ -39,10 +39,6 @@
 <br>
 
 <div class="container">
-  <div class="col-sm-12 hype text-center">
-      <h1><strong><%= @outline.title %></strong></h1>
-  </div>  
-    <br>
     <div class="col-sm-12 text-center">
       <% if current_user.paid ==1 %>
         <div><%= raw(@outline.body) %></div>
