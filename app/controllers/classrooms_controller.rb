@@ -9,7 +9,6 @@ class ClassroomsController < ApplicationController
   	@classroom = Classroom.find(params[:id])
     @classrooms = Classroom.all
     @sems = Sem.all
-    @outline = Outline.find(params[:id])
     @outlines = Outline.all
     @resources =Resource.all
     @question = Question.find(params[:id])

@@ -55,33 +55,24 @@
         <% for question in @classroom.questions %>
         <a><%= link_to "Questions", question_path(question), :class => "btn btn-lg" %></a>
         <% end %>
+
+
     </div>
 </div>
 </div>
 <div class="container">
 <% @classroom.sems.order(created_at: :asc).each do |sem| %>
 <div><%= raw(sem.body) %></div>
-<div class="container text-center">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="panel panel-primary">
-                <div class="row">
-                    <ul class="col-md-12">
-                      <% sem.outlines.order(created_at: :asc).each do |outline| %>
-                        <li class="spidey list-group-item">
-                            <tr><a><%= link_to outline.title, outline_path(outline)%></a></tr>
-                        </li>
-                      <% end %>
-                    </ul>
-                </div>
-            </div> 
-        </div>
-    </div>
-</div>
-<div><%= raw(sem.footer) %></div>
+  <div class="herog row">
+      <% sem.outlines.order(created_at: :asc).each do |outline| %>
+        <a><%= link_to "Notes", outline_path(outline), :class => "btn btn-lg" %></a>  
+      <% end %> 
+
+<% end %>          
+  </div>
 <br>
 <br>
-<% end %>
+
 <br>
 </div>
 <div class="herog text-center">

@@ -12,6 +12,7 @@ gem 'acts_as_votable'
 gem 'activeadmin'
 gem 'formtastic'
 gem 'mathjax-rails'
+gem 'activerecord-reset-pk-sequence'
 # Plus integrations with:
 gem 'devise'
 gem 'cancan' # or cancancan
