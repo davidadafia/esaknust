@@ -59,7 +59,7 @@
 <a><%= link_to "Questions", question_path(question), :class => "btn btn-lg" %></a>
 <% end %>
 </div>
-<div class="herog row ">
+<div class="herog row">
 <% @classroom.sems.order(created_at: :asc).each do |sem| %>
 <% sem.outlines.order(created_at: :asc).each do |outline| %>
 <a><%= link_to outline.title, outline_path(outline), :class => "btn btn-lg" %></a> <br> 
