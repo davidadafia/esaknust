@@ -766,14 +766,15 @@ iframe {
 ================================================= */
 
 .answer {
-  background-color: #eae8ed;
+  background-color: #ddf0d8;
   border-radius: 4px;
   padding: 1px;
 }
 
 .note {
+  text-align: center;
   display: inline;
-  background-color: #b9cbe1;
+  background-color: #eae8ed;
   border-radius: 4px;
   padding: 7px;
 }
