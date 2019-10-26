@@ -783,6 +783,17 @@ iframe {
   border-radius: 8px;
   padding: 7px;
 }
+
+.side-note {
+  margin-top: 100px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.curve-graph {
+  width: 700px;
+  height: 300px;
+}
 }
 
 @media screen and (max-width: 768px) {
@@ -803,6 +814,11 @@ iframe {
   background-color: #febac9; 
   border-radius: 8px;
   padding: 7px;
+}
+
+.curve-graph {
+  width: 350px;
+  height: 150px;
 }
 }
 
