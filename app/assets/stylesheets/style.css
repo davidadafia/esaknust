@@ -764,7 +764,7 @@ iframe {
 --- Note
 ====================================================
 ================================================= */
-
+@media screen and (min-width: 769px) {
 .answer {
   background-color: #ddf0d8;
   border-radius: 4px;
@@ -773,11 +773,28 @@ iframe {
 
 .note {
   text-align: center;
-  display: inline;
   background-color: #eae8ed;
   border-radius: 4px;
   padding: 7px;
 }
+}
+
+@media screen and (max-width: 768px) {
+.answer {
+  background-color: #ddf0d8;
+  border-radius: 4px;
+  padding: 1px;
+}
+
+.note {
+  text-align: center;
+  background-color: #eae8ed;
+  border-radius: 4px;
+  padding: 7px;
+}
+}
+
+
 /* =================================================
 ====================================================
 --- Note
