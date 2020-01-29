@@ -1,5 +1,4 @@
 class YearsController < ApplicationController
-  before_filter :configure_permitted_parameters
   before_action :authenticate_user!
   def index
     @years = Year.all
